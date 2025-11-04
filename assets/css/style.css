@@ -1,0 +1,19 @@
+body {
+    font-family: system-ui, sans-serif;
+    margin: 2rem auto;
+    max-width: 700px;
+    line-height: 1.6;
+  }
+  
+  nav a {
+    margin-right: 0.5rem;
+  }
+  
+  #filters label {
+    margin-right: 1rem;
+  }
+  
+  ul {
+    padding-left: 1rem;
+  }
+  
