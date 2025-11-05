@@ -1,0 +1,8 @@
+#- name: sample
+#  description: sample-text
+#  criteria:
+#    - Criteria One
+#    - Criteria Two
+#    - Criteria Three
+#  updated: 11-5-25
+#  link: sample.url
