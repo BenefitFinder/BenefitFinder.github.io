@@ -17,3 +17,69 @@ body {
     padding-left: 1rem;
   }
   
+  .article-page {
+    max-width: 900px;
+    margin: 2rem auto;
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .back-btn {
+    display: inline-block;
+    background: #555;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .article-header h1 { font-size: 1.8rem; margin-bottom: 0.2rem; }
+  .article-header h2 { font-size: 1.3rem; color: #666; margin-top: 0; }
+  .description { color: #666; }
+  
+  .meta-section {
+    display: flex;
+    justify-content: space-between;
+    background: #f3f3f3;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  
+  .meta-section div { width: 48%; }
+  
+  .requirements {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .requirements > div {
+    background: #f6f6f6;
+    padding: 1rem;
+    border-radius: 6px;
+    flex: 1;
+    margin-right: 1rem;
+  }
+  
+  .apply-box {
+    flex: 1;
+    background: #f6f6f6;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #666;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  
+  .details {
+    margin-top: 2rem;
+  }
+  
