@@ -1,0 +1,51 @@
+---
+layout: custom
+---
+
+<div class="article-page" style="max-width: 800px; margin: 2rem auto;">
+  <a href="/" class="back-btn">← Back to Search</a>
+
+  <header class="article-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<h2>{{ page.subtitle }}</h2>{% endif %}
+    {% if page.description %}<p class="description">{{ page.description }}</p>{% endif %}
+  </header>
+
+  <div class="meta-section" style="display: flex; gap: 2rem; background: #f7f7f7; padding: 1rem; border-radius: 8px;">
+    <div class="criteria">
+      <h3>Criteria</h3>
+      <ul>
+        {% for item in page.criteria %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tags">
+      <h3>Tags</h3>
+      <ul>
+        {% for tag in page.tags %}
+          <li>{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="requirements" style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1.5rem;">
+    <div style="flex: 1;">
+      <h3>Things You’ll Need</h3>
+      <ul>
+        {% for item in page.requirements %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div style="flex: 1;">
+      <h3>How To Apply</h3>
+      <ol>
+        {% for step in page.steps %}
+          <li>{{ step }}</li>
+        {% endfor %}
+      </ol>
+    </div>
