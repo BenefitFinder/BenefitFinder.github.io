@@ -1,8 +1,26 @@
+---
 #- name: sample
 #  description: sample-text
 #  criteria:
 #    - Criteria One
 #    - Criteria Two
 #    - Criteria Three
+#  tags:
+#    - Tag One
+#    - Tag Two
+#    - Tag Three
 #  updated: 11-5-25
 #  link: sample.url
+
+- name: Health Assistance Program
+  description: Provides financial help for qualifying low-incomme residents
+  criteria:
+    - Resident of the state
+    - Income below $40,000
+    - Must be 18 years or older
+  tags:
+    - Health
+    - Financial Aid
+  updated: 11-7-25
+  link: BenefiteFinder.github.io/_articles/example_article.html 
+...
