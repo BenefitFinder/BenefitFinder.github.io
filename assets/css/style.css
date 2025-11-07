@@ -3,6 +3,7 @@ body {
     margin: 2rem auto;
     max-width: 700px;
     line-height: 1.6;
+    background-color: red;
   }
   
   nav a {

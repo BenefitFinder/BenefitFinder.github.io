@@ -4,4 +4,4 @@ title: Subpage
 ---
 
 # Subpage
-Back to the [homepage](../).
+Back to the [homepage](/homepage).
