@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Homepage
+permalink: /
 ---
 
 # Homepage
-Go to the [subpage](subpage/).
+Go to the [subpage](/homepage/subpage/).

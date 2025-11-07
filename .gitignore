@@ -1,2 +1,4 @@
 Gemfile
 Gemfile.lock
+vendor/
+_site/

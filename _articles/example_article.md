@@ -22,4 +22,5 @@ application_link: https://example.gov/apply
 alt_apply_text: Link to an alternative way to apply (for example, a local help center).
 ---
 
+
 A more detailed explanation of criteria and benefits. Include tables, contact details, or further steps if applicable.

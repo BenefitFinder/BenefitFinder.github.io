@@ -1,23 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const items = [
-      { name: "Apple", type: "fruit" },
-      { name: "Carrot", type: "vegetable" },
-      { name: "Milk", type: "dairy" }
-    ];
-  
-    const list = document.getElementById("item-list");
-    const filters = document.querySelectorAll("#filters input[type=checkbox]");
-  
-    function updateList() {
-      const activeFilters = Array.from(filters)
-        .filter(f => f.checked)
-        .map(f => f.value);
-  
-      const visibleItems = items.filter(item => activeFilters.includes(item.type));
-      list.innerHTML = visibleItems.map(item => `<li>${item.name}</li>`).join("");
-    }
-  
-    filters.forEach(f => f.addEventListener("change", updateList));
-    updateList();
-  });
-  
+  const list = document.getElementById("item-list");
+  const filters = document.querySelectorAll("#filters input[type=checkbox]");
+
+  // Uses the data from search.md
+  const programs = window.programs || [];
+
+  function updateList() {
+    const activeFilters = Array.from(filters)
+      .filter(f => f.checked)
+      .map(f => f.value);
+
+    // Show items that match checked criterion
+    const visiblePrograms = programs.filter(program =>
+      program.criteria.some(c => activeFilters.includes(c))
+    );
+
+    // Render the visible programs
+      list.innerHTML = visiblePrograms
+        .map(
+          p => `
+          <li>
+            <strong><a href="${p.url}">${p.title}</a></strong>
+            <ul>${p.criteria.map(c => `<li>${c}</li>`).join("")}</ul>
+          </li>`
+        )
+        .join("");
+    
+  }
+
+  filters.forEach(f => f.addEventListener("change", updateList));
+  updateList();
+});
