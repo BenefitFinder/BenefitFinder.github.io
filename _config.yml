@@ -1,7 +1,21 @@
 title: Benefit Finder
 description: A tool to help you find all the benefits you deserve
-theme: minima
+theme: "minimal-mistakes-jekyll"
 
 collections:
   articles:
     output: true
+
+nav:
+  main: main
+
+search: true
+search_full_content: true
+search_provider: lunr
+lunr:
+  search_within_pages: true
+  fields: 
+    - title
+    - excerpt
+    - categories
+    - tags
