@@ -11,23 +11,23 @@ benefit-categories:
   - image_path: /assets/images/health_image.png
     alt: "Health Benefits"
     title: "Health & Wellness"
-    excerpt: "Programs that benefit your health."
+    excerpt: "There are a lot of programs that can help pay your medical bills. This includes things like reduced-cost or free insurance for you and your dependents."
   - image_path: /assets/images/food_image.png
     alt: "Food Benefits"
     title: "Addressing Hunger"
-    excerpt: "Programs that help you find food."
+    excerpt: "These programs help keep you from going hungry. SNAP can help make ends meet along with more specific programs like WIC or emergency food assistance."
   - image_path: /assets/images/housing_image.png
     alt: "Housing Benefits"
     title: "Housing Support"
-    excerpt: "Get help with rent or housing costs."
+    excerpt: "Housing is hard to find and expensive right now. Fortunately there are options to get rental assistance or public housing. This can extend to emergency housing as well."
   - image_path: /assets/images/work_image.png
     alt: "Employment Benefits"
     title: "Help to stay on your feet."
-    excerpt: "Assistance finding and applying for jobs."
+    excerpt: "Sudden or prolonged unemployment can be devastating. Times like these are when you can collect unemployment benefits or look towards things like WorkSource to help you get back on your feed."
 ---
 
 
-Welcome to **Benefit Finder**, a tool that helps you discover federal, state, and local benefits that match your needs.
+Welcome to **Benefit Finder**, a tool that helps you discover and apply for benefits that match your needs.
 
 <form action="/search/" method="get" style="text-align:center; margin: 2rem 0;">
   <input type="text" name="q" placeholder="Search pages..." style="padding:10px; width:300px; border-radius:8px; border:1px solid #ccc;">
