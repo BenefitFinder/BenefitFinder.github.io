@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% include scripts.html %}
+<div class="search-page container">
+  <h1>Search</h1>
+  <form id="search-form" action="#" method="get">
+    <input type="search" id="search" name="q" placeholder="Search pages..." aria-label="Search benefits" />
+  </form>
+
+  <div id="search-results"></div>
+</div>
+
+<!-- Load Lunr and search index -->
+<script src="{{ '/assets/js/lunr/lunr.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/lunr/lunr-store.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/lunr/search.js' | relative_url }}"></script>
