@@ -1,6 +1,9 @@
 title: Benefit Finder
 description: A tool to help you find all the benefits you deserve
-theme: "minimal-mistakes-jekyll"
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+
+plugins:
+  - jekyll-include-cache
 
 collections:
   articles:
