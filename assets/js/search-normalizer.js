@@ -1,7 +1,7 @@
 function normalizeQuery(q) {
     q = q.toLowerCase();
   
-    // Simple mappings
+    // Mapping semantic things to criteria, this should be updated for each criteria as we add them
     if (q.includes("over 65") || q.includes("older than 65") || q.includes("senior"))
       q += " age>65";
   

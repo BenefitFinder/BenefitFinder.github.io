@@ -19,3 +19,9 @@ lunr:
     - excerpt
     - categories
     - tags
+
+footer:
+  since: "2025"
+
+atom_feed:
+  hide: true
