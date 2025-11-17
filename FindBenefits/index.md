@@ -3,19 +3,47 @@ layout: custom
 title: Find Benefits
 ---
 
-<div id="filters" class="filter-cards">
-  <label class="filter-card">
-    <input type="checkbox" value="Income below $40,000">
-    <span>Under $40,000</span>
-  </label>
-  <label class="filter-card">
-    <input type="checkbox" value="Income below $20,000">
-    <span>Under $20,000</span>
-  </label>
-  <label class="filter-card">
-    <input type="checkbox" value="Must be 18 years or older">
-    <span>Over 18</span>
-  </label>
+<div id="filters" class="filter-groups">
+
+  <!-- Added categories for each criteria -->
+
+  <!-- Income Category -->
+  <div class="filter-group">
+    <h4 class="filter-heading">Income</h4>
+    <div class="filter-cards">
+      <label class="filter-card">
+        <input type="checkbox" value="Income below $40,000" data-category="income">
+        <span>Under $40,000</span>
+      </label>
+      <label class="filter-card">
+        <input type="checkbox" value="Income below $20,000" data-category="income">
+        <span>Under $20,000</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Age Category -->
+  <div class="filter-group">
+    <h4 class="filter-heading">Age</h4>
+    <div class="filter-cards">
+      <label class="filter-card">
+        <input type="checkbox" value="Must be 18 years or older" data-category="age">
+        <span>Over 18</span>
+      </label>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- Instruction card -->
+<div id="instruction-card" class="instruction-card">
+  <h3>Getting Started</h3>
+  <p>To find programs that may apply to you:</p>
+  <ol>
+    <li>Select one or more filters above.</li>
+    <li>Matching benefits will appear here.</li>
+  </ol>
 </div>
 
 <ul id="item-list"></ul>
@@ -31,7 +59,7 @@ title: Find Benefits
   #item-list li {
     margin: 0.5em 0;
   }
-  /* Container spacing */
+
   .filter-cards {
     display: flex;
     flex-wrap: wrap;
@@ -39,7 +67,7 @@ title: Find Benefits
     margin-bottom: 1.5rem;
   }
 
-  /* Each card */
+  /* Each result card */
   .filter-card {
     display: flex;
     align-items: center;
@@ -54,30 +82,29 @@ title: Find Benefits
     user-select: none;
   }
 
-  /* Hover & active states */
+  /* Hover  */
   .filter-card:hover {
     background: #f0f4f8;
     transform: translateY(-1px);
   }
 
-  /* When the checkbox inside is checked */
+  /* When checkbox is checked */
   .filter-card input[type="checkbox"]:checked + span {
     font-weight: 600;
-    color: #0a66c2; /* accent color (blue-ish) */
+    color: #0a66c2;
   }
 
   .filter-card input[type="checkbox"]:checked {
-    accent-color: #0a66c2; /* modern browsers */
+    accent-color: #0a66c2;
   }
 
-  /* Hide the raw checkbox but keep it clickable */
   .filter-card input[type="checkbox"] {
     width: 1rem;
     height: 1rem;
     margin: 0;
   }
 
-  /* Result list */
+  /* Result list formatting */
   #item-list {
     list-style: none;
     padding: 0;
@@ -151,7 +178,7 @@ title: Find Benefits
 }
 
 .benefit-card.expanded .benefit-details {
-  max-height: 500px; /* enough for all criteria */
+  max-height: 500px; /* Add more height if necessary here to contain all the criteria for cards */
   padding-top: 0.5rem;
 }
 
@@ -160,7 +187,7 @@ title: Find Benefits
   color: #333;
 }
 
-/* Center and constrain the results list */
+/* center the list */
 #item-list {
   list-style: none;
   padding: 0;
@@ -171,9 +198,65 @@ title: Find Benefits
   margin: 0 auto;
 }
 
+/* ---- Instruction Card Styling ---- */
+.instruction-card {
+  background: #f9f9fb;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  max-width: 700px;
+  margin: 1.5rem auto;
+  color: #444;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  text-align: left;
+}
+
+.instruction-card h3 {
+  margin-top: 0;
+  color: #0a66c2;
+}
+
+/* --- Filter Groups & Headings --- */
+.filter-groups {
+  display: flex;
+  flex-wrap: wrap; /* Wrap for mobile */
+  gap: 1.5rem;
+  justify-content: center;   
+  margin-bottom: 2rem;
+}
+
+.filter-group {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  width: 320px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.filter-group:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.filter-heading {
+  margin: 0 0 0.8rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0a66c2;
+  border-bottom: 2px solid #e2e6ea;
+  padding-bottom: 0.4rem;
+}
+
+.filter-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
 
 </style>
-
 
 <script>
   window.programs = [
@@ -186,6 +269,7 @@ title: Find Benefits
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ];
-</script>
+</script> 
 
 {% include scripts.html %}
+<script src="/assets/js/checklist.js"></script>

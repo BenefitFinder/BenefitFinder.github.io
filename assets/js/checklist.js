@@ -1,60 +1,96 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-  const list = document.getElementById("item-list");
-  const filters = document.querySelectorAll("#filters input[type=checkbox]");
+
+  //make sure programs is valid
+  const filters = Array.from(document.querySelectorAll('#filters input[type="checkbox"]'));
+  const itemList = document.getElementById("item-list");
+  const instructionCard = document.getElementById("instruction-card");
   const programs = window.programs || [];
 
-  function renderResults(visiblePrograms) {
-    if (!list) return;
-    list.innerHTML = "";
 
-    if (visiblePrograms.length === 0) {
-      list.innerHTML = `<li>No matching programs found.</li>`;
+  //display the benefit cards
+  function renderItems(matches) {
+    itemList.innerHTML = "";
+
+    if (!matches || matches.length === 0) {
       return;
     }
 
-    visiblePrograms.forEach(p => {
-      const card = document.createElement("li");
-      card.classList.add("benefit-card");
-      card.innerHTML = `
-        <div class="benefit-header">
-          <a href="${p.url}" class="benefit-title">${p.title}</a>
-          <button class="toggle-btn" aria-label="Show details">▼</button>
-        </div>
-        <p class="benefit-description">${p.description || ""}</p>
-        <div class="benefit-details">
-          <h4>Eligibility Criteria</h4>
-          <ul class="criteria-list">
-            ${(p.criteria || []).map(c => `<li>${c}</li>`).join("")}
-          </ul>
+    matches.forEach(program => {
+      const li = document.createElement("li");
+
+      li.innerHTML = `
+        <div class="benefit-card">
+          <div class="benefit-header">
+            <a href="${program.url}" class="benefit-title">${program.title}</a>
+            <button class="toggle-btn">&#9660;</button>
+          </div>
+
+          <p class="benefit-description">${program.description}</p>
+
+          <div class="benefit-details">
+            <ul class="criteria-list">
+              ${(program.criteria || []).map(c => `<li>${c}</li>`).join("")}
+            </ul>
+          </div>
         </div>
       `;
-      list.appendChild(card);
-    });
 
-    // add expand/collapse behavior
-    list.querySelectorAll(".toggle-btn").forEach(btn => {
-      btn.addEventListener("click", e => {
-        const card = e.target.closest(".benefit-card");
+      // Expand/collapse functionality
+      const card = li.querySelector(".benefit-card");
+      const toggle = li.querySelector(".toggle-btn");
+      toggle.addEventListener("click", () => {
         card.classList.toggle("expanded");
       });
+
+      itemList.appendChild(li);
     });
   }
 
-  function updateList() {
-    const activeFilters = Array.from(filters)
-      .filter(f => f.checked)
-      .map(f => f.value);
 
-    const visiblePrograms = activeFilters.length
-      ? programs.filter(p =>
-          (p.criteria || []).some(c => activeFilters.includes(c))
-        )
-      : programs;
+  //apply filters
+  function applyFilters() {
+    const activeFilters = filters.filter(f => f.checked).map(f => f.value);
 
-    renderResults(visiblePrograms);
+    if (activeFilters.length === 0) {
+      // No filters → show instruction card, clear results
+      instructionCard.style.display = "block";
+      itemList.innerHTML = "";
+      return;
+    }
+
+    instructionCard.style.display = "none";
+
+    // Find programs where any criteria matches a selected filter
+    const matches = programs.filter(program =>
+      program.criteria.some(c => activeFilters.includes(c))
+    );
+
+    renderItems(matches);
   }
 
-  filters.forEach(f => f.addEventListener("change", updateList));
-  updateList();
+
+  //make checkboxes in teh same category mutually exclusive
+  filters.forEach(f => {
+    f.addEventListener("change", () => {
+      // Only when checkbox is turned on
+      if (!f.checked) {
+        applyFilters();
+        return;
+      }
+
+      const category = f.dataset.category;
+      if (!category) return;
+
+      // Uncheck all other checkboxes in same category
+      filters
+        .filter(other => other !== f && other.dataset.category === category)
+        .forEach(other => (other.checked = false));
+
+      applyFilters();
+    });
+  });
+
+
+  // initial page state
+  applyFilters();
 });
