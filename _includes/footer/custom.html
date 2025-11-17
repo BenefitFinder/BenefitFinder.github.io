@@ -1,0 +1,79 @@
+<p class="feedback-link"></p>
+  <a href="{{ '/feedback/' | relative_url }}"> See something wrong? Tell us here!</a>
+</p>
+
+<style>
+
+.feedback-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.feedback-link a {
+  color: var(--link-color);
+  font-weight: 600;
+}
+
+.feedback-link a:hover {
+  text-decoration: underline;
+}
+
+</style>
+
+<script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+
+<!-- intro JS tour code -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("take-tour-btn");
+  if (!btn) return;
+
+  btn.addEventListener("click", function () {
+    const tour = introJs();
+
+    tour.setOptions({
+      //uncomment if home page gets longer
+      //scrollTo: true,
+      //autoPosition: false,
+      steps: [
+        {
+          element: document.querySelector('nav a[href="/"]'),
+          intro: "Get back to this page at any time by clicking here."
+        },
+        {
+          element: document.querySelector('nav a[href="/articles/"]'),
+          intro: "You can view the comprehensive list of all benefits we currently track here."
+        },
+        {
+          element: document.querySelector('nav a[href="/FindBenefits/"]'),
+          intro: "On this page you can enter information about yourself to find benefits you are eligible for."
+        },
+        {
+          element: document.querySelector('button.search__toggle'),
+          intro: "Clicking this will open a search option to find any page on the website. Simply click it again to close the overlay."
+        },
+        {
+          element: document.querySelector('#learn-more'),
+          intro: "Learn more about what benefits can provide and why you should consider applying!",
+          position: "bottom"
+        }
+      ]
+    });
+    /*
+    * uncomment if home page is too long
+    tour.onbeforechange(function (targetElement) {
+      if (targetElement.id === "learn-more") {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+    */
+
+    tour.start();
+  });
+});
+</script>
