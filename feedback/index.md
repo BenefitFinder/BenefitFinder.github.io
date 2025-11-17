@@ -1,6 +1,6 @@
 <div class="feedback-container">
-  <h2>See Something Wrong? Tell Us Here</h2>
-  <p>Your feedback helps us improve this resource. You don’t need an account — just send your message below.</p>
+  <h2>Help us improve Benefit Finder</h2>
+  <p>Your feedback helps us improve this resource. You don’t need an account, just send your message below.</p>
 
   <form action="https://formspree.io/f/xwpayzrq" method="POST" class="feedback-form">
     
