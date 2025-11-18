@@ -26,54 +26,66 @@
 
 <!-- intro JS tour code -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("take-tour-btn");
-  if (!btn) return;
-
-  btn.addEventListener("click", function () {
-    const tour = introJs();
-
-    tour.setOptions({
-      //uncomment if home page gets longer
-      //scrollTo: true,
-      //autoPosition: false,
-      steps: [
-        {
-          element: document.querySelector('nav a[href="/"]'),
-          intro: "Get back to this page at any time by clicking here."
-        },
-        {
-          element: document.querySelector('nav a[href="/articles/"]'),
-          intro: "You can view the comprehensive list of all benefits we currently track here."
-        },
-        {
-          element: document.querySelector('nav a[href="/FindBenefits/"]'),
-          intro: "On this page you can enter information about yourself to find benefits you are eligible for."
-        },
-        {
-          element: document.querySelector('button.search__toggle'),
-          intro: "Clicking this will open a search option to find any page on the website. Simply click it again to close the overlay."
-        },
-        {
-          element: document.querySelector('#learn-more'),
-          intro: "Learn more about what benefits can provide and why you should consider applying!",
-          position: "bottom"
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("take-tour-btn");
+    if (!btn) return;
+  
+    btn.addEventListener("click", function () {
+      const tour = introJs();
+  
+      const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+  
+      const openMobileMenu = () => {
+        const toggle = document.querySelector(".greedy-nav__toggle");
+        const menu = document.querySelector(".greedy-nav .visible-links");
+  
+        if (toggle && menu && menu.children.length && menu.offsetParent === null) {
+          toggle.click(); // open nav menu if on mobile
         }
-      ]
-    });
-    /*
-    * uncomment if home page is too long
-    tour.onbeforechange(function (targetElement) {
-      if (targetElement.id === "learn-more") {
-        targetElement.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      }
-    });
-    */
+      };
+  
+      tour.setOptions({
+        steps: [
+          {
+            element: document.querySelector('nav a[href="/"]'),
+            intro: "Get back to this page at any time by clicking here."
+          },
+          {
+            element: document.querySelector('nav a[href="/articles/"]'),
+            intro: "You can view the comprehensive list of all benefits we track here."
+          },
+          {
+            element: document.querySelector('nav a[href="/FindBenefits/"]'),
+            intro: "Enter information about yourself here to find benefits you are eligible for."
+          },
+          {
+            element: document.querySelector('button.search__toggle'),
+            intro: "Click here to search the entire website."
+          },
+          {
+            element: document.querySelector('#learn-more'),
+            intro: "Learn more about how benefits can help you!",
+            position: "bottom"
+          }
+        ]
+      });
+  
+      tour.onbeforechange(function (targetElement) {
+        const needsMenu =
+          targetElement?.matches('nav a[href="/articles/"]') ||
+          targetElement?.matches('nav a[href="/FindBenefits/"]');
 
-    tour.start();
+        if (isMobile()) {
+          if (needsMenu) {
+            openMobileMenu();   // ← Opens the mobile nav FOR these steps
+          } else {
+            closeMobileMenu();  // ← Closes the mobile nav for all other steps
+          }
+        }
+      });
+  
+      tour.start();
+    });
   });
-});
-</script>
+  </script>
+  
