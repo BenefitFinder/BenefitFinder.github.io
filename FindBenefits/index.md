@@ -12,11 +12,11 @@ title: Find Benefits
     <h4 class="filter-heading">Income</h4>
     <div class="filter-cards">
       <label class="filter-card">
-        <input type="checkbox" value="Income below $40,000" data-category="income">
+        <input type="checkbox" value="Income below $40,000" data-category="income" id="check1">
         <span>Under $40,000</span>
       </label>
       <label class="filter-card">
-        <input type="checkbox" value="Income below $20,000" data-category="income">
+        <input type="checkbox" value="Income below $20,000" data-category="income" id="check2">
         <span>Under $20,000</span>
       </label>
     </div>
@@ -27,7 +27,7 @@ title: Find Benefits
     <h4 class="filter-heading">Age</h4>
     <div class="filter-cards">
       <label class="filter-card">
-        <input type="checkbox" value="Must be 18 years or older" data-category="age">
+        <input type="checkbox" value="Must be 18 years or older" data-category="age" id="check3">
         <span>Over 18</span>
       </label>
     </div>
@@ -270,6 +270,8 @@ title: Find Benefits
     {% endfor %}
   ];
 </script> 
+
+
 
 {% include scripts.html %}
 <script src="/assets/js/checklist.js"></script>
