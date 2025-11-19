@@ -7,6 +7,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const programs = window.programs || [];
 
 
+  // restore checkbox states from localStorage
+  filters.forEach(cb => {
+    const saved = localStorage.getItem(cb.id);
+    cb.checked = (saved === "true");
+  });
+
+  // ensure the mutual exclusivity remains
+  const categories = [...new Set(filters.map(f => f.dataset.category).filter(Boolean))];
+  categories.forEach(category => {
+    const checkedInCategory = filters.filter(f => f.dataset.category === category && f.checked);
+    if (checkedInCategory.length > 1) {
+      checkedInCategory.slice(0, -1).forEach(f => {
+        f.checked = false;
+        localStorage.setItem(f.id, false);
+      });
+    }
+  });
+
+
   //display the benefit cards
   function renderItems(matches) {
     itemList.innerHTML = "";
@@ -72,19 +91,29 @@ document.addEventListener("DOMContentLoaded", () => {
   //make checkboxes in teh same category mutually exclusive
   filters.forEach(f => {
     f.addEventListener("change", () => {
-      // Only when checkbox is turned on
+
+      // Save new state
+      localStorage.setItem(f.id, f.checked);
+
+      // If this box was unchecked
       if (!f.checked) {
         applyFilters();
         return;
       }
 
       const category = f.dataset.category;
-      if (!category) return;
+      if (!category) {
+        applyFilters();
+        return;
+      }
 
-      // Uncheck all other checkboxes in same category
+      // Uncheck others in the same category
       filters
         .filter(other => other !== f && other.dataset.category === category)
-        .forEach(other => (other.checked = false));
+        .forEach(other => {
+          other.checked = false;
+          localStorage.setItem(other.id, false);
+        });
 
       applyFilters();
     });

@@ -4,6 +4,22 @@ title: Find Benefits
 ---
 
 <div id="filters" class="filter-groups">
+  <div class="search-group">
+    <h4 class="filter-heading">Search Type</h4>
+    <div id="searchDisplay">
+      <label class="filter-card">
+        <input type="checkbox" value="Eligibility Criteria" data-category="searchType" id="check4">
+        <span>Eligibility Criteria</span>
+      </label>
+      <label class="filter-card">
+        <input type="checkbox" value="Benefit Categories" data-category="searchType" id="check5">
+        <span>Benefit Categories</span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<div id="filters" class="filter-groups">
 
   <!-- Added categories for each criteria -->
 
@@ -12,11 +28,11 @@ title: Find Benefits
     <h4 class="filter-heading">Income</h4>
     <div class="filter-cards">
       <label class="filter-card">
-        <input type="checkbox" value="Income below $40,000" data-category="income">
+        <input type="checkbox" value="Income below $40,000" data-category="income" id="check1">
         <span>Under $40,000</span>
       </label>
       <label class="filter-card">
-        <input type="checkbox" value="Income below $20,000" data-category="income">
+        <input type="checkbox" value="Income below $20,000" data-category="income" id="check2">
         <span>Under $20,000</span>
       </label>
     </div>
@@ -27,7 +43,7 @@ title: Find Benefits
     <h4 class="filter-heading">Age</h4>
     <div class="filter-cards">
       <label class="filter-card">
-        <input type="checkbox" value="Must be 18 years or older" data-category="age">
+        <input type="checkbox" value="Must be 18 years or older" data-category="age" id="check3">
         <span>Over 18</span>
       </label>
     </div>
@@ -255,6 +271,21 @@ title: Find Benefits
   gap: 0.6rem;
 }
 
+#searchDisplay{
+  display: flex;
+  flex-direction row;
+  gap:0.6em;
+}
+
+.search-group {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  width: 400px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
 
 </style>
 
@@ -270,6 +301,8 @@ title: Find Benefits
     {% endfor %}
   ];
 </script> 
+
+
 
 {% include scripts.html %}
 <script src="/assets/js/checklist.js"></script>
