@@ -4,6 +4,22 @@ title: Find Benefits
 ---
 
 <div id="filters" class="filter-groups">
+  <div class="search-group">
+    <h4 class="filter-heading">Search Type</h4>
+    <div id="searchDisplay">
+      <label class="filter-card">
+        <input type="checkbox" value="Eligibility Criteria" data-category="searchType" id="check4">
+        <span>Eligibility Criteria</span>
+      </label>
+      <label class="filter-card">
+        <input type="checkbox" value="Benefit Categories" data-category="searchType" id="check5">
+        <span>Benefit Categories</span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<div id="filters" class="filter-groups">
 
   <!-- Added categories for each criteria -->
 
@@ -255,6 +271,21 @@ title: Find Benefits
   gap: 0.6rem;
 }
 
+#searchDisplay{
+  display: flex;
+  flex-direction row;
+  gap:0.6em;
+}
+
+.search-group {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  width: 400px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
 
 </style>
 
