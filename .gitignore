@@ -3,3 +3,4 @@ Gemfile.lock
 vendor/
 _site/
 .DS_Store
+local_config.yml
