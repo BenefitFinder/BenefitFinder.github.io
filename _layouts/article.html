@@ -3,50 +3,276 @@ layout: custom
 ---
 
 {% include scripts.html %}
-<div class="article-page" style="max-width: 800px; margin: 2rem auto;">
-  <a href="/FindBenefits/" class="back-btn">Back to Search</a>
 
+<style>
+  /* Container */
+  .article-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  /* Back link */
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Header layout */
+  .article-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .article-header-text {
+    flex: 1;
+  }
+
+  /* Logo styling */
+  .article-header-logo img {
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+    margin-top: 0.25rem;
+  }
+
+/* On mobile, stack vertically */
+@media (max-width: 600px) {
+  .article-header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .article-header-logo img {
+    max-width: 100px;
+    margin-top: 0.5rem;
+  }
+}
+
+  .article-header {
+    margin-bottom: 2rem;
+  }
+
+  .article-title {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+  }
+
+  .article-subtitle,
+  .article-description {
+    color: #555;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Card styling */
+  .card {
+    background: #f7f7f7;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.75rem;
+    border: 1px solid #e2e2e2;
+  }
+
+  /* Remove extra space above card headings */
+  .card h3,
+  .details-section h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+
+  /* Grid layout for two-column blocks */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  @media (max-width: 700px) {
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* List styling */
+  .list {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .list li {
+    margin-bottom: 0.4rem;
+  }
+
+  /* Tags */
+  .tag-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .tag-list .tag {
+    display: inline-block;
+    background: #e9eefb;
+    color: #3451a1;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    margin: 0.2rem;
+    font-size: 0.85rem;
+  }
+
+  /* Apply Button */
+  .primary-btn {
+    display: inline-block;
+    background: #3451a1;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .primary-btn:hover {
+    background: #2b448a;
+  }
+
+  .small-note {
+    color: #555;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* More Details section */
+  .details-section h3 {
+    margin-bottom: 0.75rem;
+  }
+
+  .details-content {
+    background: #fafafa;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    padding: 1rem;
+    line-height: 1.6;
+  }
+</style>
+
+<div class="article-container">
+
+  <!-- Breadcrumb / Back -->
+  <a href="/FindBenefits/" class="back-link">Back to Search</a>
+
+  <!-- Header Section -->
   <header class="article-header">
-    <h1>{{ page.title }}</h1>
-    {% if page.subtitle %}<h2>{{ page.subtitle }}</h2>{% endif %}
-    {% if page.description %}<p class="description">{{ page.description }}</p>{% endif %}
+
+    <div class="article-header-flex">
+      <div class="article-header-text">
+        <h1 class="article-title">{{ page.title }}</h1>
+        {% if page.subtitle %}<p class="article-subtitle">{{ page.subtitle }}</p>{% endif %}
+        {% if page.description %}<p class="article-description">{{ page.description }}</p>{% endif %}
+      </div>
+  
+      {% if page.logo %}
+      <div class="article-header-logo">
+        <img src="{{ page.logo }}" alt="{{ page.title }} logo">
+      </div>
+      {% endif %}
+    </div>
+  
   </header>
 
-  <div class="meta-section" style="display: flex; gap: 2rem; background: #f7f7f7; padding: 1rem; border-radius: 8px;">
-    <div class="criteria">
-      <h3>Criteria</h3>
-      <ul>
+  <!-- Criteria + Tags -->
+  <section class="card card-grid">
+    <div>
+      <h3>Eligibility Criteria</h3>
+      <ul class="list">
         {% for item in page.criteria %}
           <li>{{ item }}</li>
         {% endfor %}
       </ul>
     </div>
 
-    <div class="tags">
+    <div>
       <h3>Tags</h3>
-      <ul>
+      <ul class="tag-list">
         {% for tag in page.tags %}
-          <li>{{ tag }}</li>
+          <li class="tag">{{ tag }}</li>
         {% endfor %}
       </ul>
     </div>
-  </div>
+  </section>
 
-  <div class="requirements" style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1.5rem;">
-    <div style="flex: 1;">
-      <h3>Things You’ll Need</h3>
-      <ul>
+  <!-- Requirements + How to Apply -->
+  <section class="card card-grid">
+    <div>
+      <h3>Things You'll Need</h3>
+      <ul class="list">
         {% for item in page.requirements %}
           <li>{{ item }}</li>
         {% endfor %}
       </ul>
     </div>
 
-    <div style="flex: 1;">
-      <h3>How To Apply</h3>
-      <ol>
+    <div>
+      <h3>How to Apply</h3>
+      <ol class="list">
         {% for step in page.steps %}
           <li>{{ step }}</li>
         {% endfor %}
       </ol>
     </div>
+  </section>
+
+  <!-- Application Link -->
+  {% if page.application_link or page.homepage_link %}
+  <section class="card card-grid">
+    <div>
+      {% if page.application_link %}
+      <h3>Link to Application</h3>
+      <a class="primary-btn" href="{{ page.application_link }}" target="_blank">
+        Apply Now
+      </a>
+        {% if page.homepage_note %}
+          <p class="small-note">{{ page.homepage_note }}</p>
+        {% endif %}
+      {% endif %}
+    </div>
+    
+    <div>
+      {% if page.homepage_link %}
+      <h3>Link to benefit homepage</h3>
+      <a class="primary-btn" href="{{ page.homepage_link }}" target="_blank">
+        Learn More
+      </a>
+        {% if page.homepage_note %}
+          <p class="small-note">{{ page.homepage_note }}</p>
+        {% endif %}
+      {% endif %}
+    </div>    
+  </section>
+  {% endif %}
+
+<!-- More Details -->
+{% if page.details or content %}
+<section class="details-section">
+  <div class="details-content">
+    <h3>More Details</h3>
+    {% if page.details %}
+      {{ page.details | markdownify }}
+    {% else %}
+      {{ content }}
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+</div>

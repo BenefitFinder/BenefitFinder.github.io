@@ -1,26 +1,26 @@
 ---
 layout: article
-title: Health Assistance Program
-subtitle: Benefits
-description: Provides financial help for qualifying low-income residents.
+title: Food Assistance Program
+subtitle: Free Meals and Groceries
+description: Provides free meals and grocery assistance for qualifying low-income residents.
 criteria:
   - Resident of the state
-  - Income below $40,000
+  - Income below $20,000
   - Must be 18 years or older
 tags:
-  - Health
+  - Food Assistance
   - Financial Aid
 requirements:
   - Proof of residence
-  - Pay stubs
+  - Recent pay stubs
   - Government ID
+  - Family size information
 steps:
   - Visit the application page
   - Complete required information
-  - Upload documents
-application_link: https://example.gov/apply
-alt_apply_text: Link to an alternative way to apply (for example, a local help center).
+  - Upload documents (ID, income verification, etc.)
+application_link: https://example.gov/food-apply
+alt_apply_text: Contact a local help center to apply in person.
 ---
+A more detailed explanation of criteria and benefits. Includes available locations, contact details, or further steps if applicable.
 
-
-A more detailed explanation of criteria and benefits. Include tables, contact details, or further steps if applicable.
