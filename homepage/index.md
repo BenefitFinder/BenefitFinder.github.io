@@ -148,6 +148,35 @@ benefit-categories:
   {% include feature_row id="benefit-categories" type="left" %}
 </div>
 
+<div
+  style="
+    text-align:center;
+    background-color:#f8f9fa;
+    padding:0.5rem 1rem 2rem 1rem;
+    border-radius:12px;
+    margin:3rem auto 2rem auto;
+    max-width:900px;
+    margin-bottom:3cm;
+  "
+  class="fade-in"
+>
+  <h2 style="font-size:2rem; margin:0 0 0.5rem 0; color:#222; padding-top:0.25rem;">
+    Millions of Americans live better because of these benefits.
+  </h2>
+
+  <hr style="border:0; border-top:2px solid #ddd; width:80%; margin:1rem auto;">
+
+  <p style="max-width:650px; margin:0 auto; color:#555; font-size:1.1rem;">
+    These benefits are paid for with taxes that you pay into, so you deserve to benefit from them too!
+    Here's a little bit about all the citizens that have chosen to apply for these programs. IN PROGRESS. This would have statistics and specific examples of improvements from benefits
+  </p>
+</div>
+<!--
+<div class="fade-in">
+  {% include feature_row id="benefit-categories" type="Right" %}
+</div>
+-->
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
