@@ -3,7 +3,7 @@ layout: custom
 title: Find Benefits
 ---
 
-<div id="filters" class="filter-groups">
+<div class="filters filter-groups">
   <div class="search-group">
     <h4 class="filter-heading">Search Type</h4>
     <div id="searchDisplay">
@@ -19,7 +19,8 @@ title: Find Benefits
   </div>
 </div>
 
-<div id="filters" class="filter-groups">
+<div id="CriteriaFilters">
+<div class="filters filter-groups">
 
   <!-- Added categories for each criteria -->
 
@@ -61,6 +62,46 @@ title: Find Benefits
     </div>
   </div>
 
+</div>
+</div>
+
+<div id="CategoryFilters">
+<div class="filters filter-groups">
+
+  <!-- Added categories for each criteria -->
+
+  <!-- Category Selection -->
+  <div class="filter-group">
+    <h4 class="filter-heading">Categories</h4>
+    <div class="filter-cards">
+      <label class="filter-card">
+        <input type="checkbox" value="Health" id="check6" data-category="tags">
+          <span class="texthelp">
+            Health
+            <span class="help-icon">?</span>
+            <span class="help-text">Benefits that are related to personal health.</span>
+        </span>
+      </label>
+      <label class="filter-card">
+        <input type="checkbox" value="Financial Aid" id="check7" data-category="tags">
+          <span class="texthelp">
+            Financial Aid
+            <span class="help-icon">?</span>
+            <span class="help-text">Benefits that are related to financial aid.</span>
+          </span>
+      </label>
+      <label class="filter-card">
+        <input type="checkbox" value="Food Assistance" id="check8" data-category="tags">
+          <span class="texthelp">
+            Food
+            <span class="help-icon">?</span>
+            <span class="help-text">Benefits that are related to food.</span>
+          </span>
+      </label>
+    </div>
+  </div>
+
+</div>
 </div>
 
 
@@ -148,22 +189,15 @@ title: Find Benefits
 }
 
 
-  #filters {
+  .filters {
     margin-bottom: 1em;
   }
-  #filters label {
+  .filters label {
     display: block;
     margin: 0.3em 0;
   }
   #item-list li {
     margin: 0.5em 0;
-  }
-
-  .filter-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
   }
 
   /* Each result card */
@@ -357,7 +391,7 @@ title: Find Benefits
 #searchDisplay{
   display: flex;
   flex-direction row;
-  gap:0.6em;
+  gap: 0.6em;
 }
 
 .search-group {
@@ -370,6 +404,7 @@ title: Find Benefits
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
+
 </style>
 
 <script>
@@ -379,7 +414,8 @@ title: Find Benefits
       "title": {{ article.title | jsonify }},
       "url": {{ article.url | relative_url | jsonify }},
       "description": {{ article.description | jsonify }},
-      "criteria": {{ article.criteria | jsonify }}
+      "criteria": {{ article.criteria | jsonify }},
+      "tags": {{ article.tags | jsonify }}
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ];
