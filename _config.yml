@@ -1,6 +1,7 @@
 title: Benefit Finder
 description: A tool to help you find all the benefits you deserve
 remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+#theme: "minimal-mistakes-jekyll"
 
 plugins:
   - jekyll-include-cache

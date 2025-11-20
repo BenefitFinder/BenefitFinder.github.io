@@ -29,11 +29,19 @@ title: Find Benefits
     <div class="filter-cards">
       <label class="filter-card">
         <input type="checkbox" value="Income below $40,000" data-category="income" id="check1">
-        <span>Under $40,000</span>
+          <span class="texthelp">
+            Under $40,000
+            <span class="help-icon">?</span>
+            <span class="help-text">Income less than $40,000.</span>
+        </span>
       </label>
       <label class="filter-card">
         <input type="checkbox" value="Income below $20,000" data-category="income" id="check2">
-        <span>Under $20,000</span>
+          <span class="texthelp">
+            Under $20,000
+            <span class="help-icon">?</span>
+            <span class="help-text">Income less than $20,000.</span>
+          </span>
       </label>
     </div>
   </div>
@@ -44,7 +52,11 @@ title: Find Benefits
     <div class="filter-cards">
       <label class="filter-card">
         <input type="checkbox" value="Must be 18 years or older" data-category="age" id="check3">
-        <span>Over 18</span>
+        <span class="texthelp">
+          Over 18
+          <span class="help-icon">?</span>
+          <span class="help-text">Older than 18 years of age.</span>
+        </span>
       </label>
     </div>
   </div>
@@ -62,9 +74,80 @@ title: Find Benefits
   </ol>
 </div>
 
+<div id="results" class="results">
+  <h2>Results</h2>
+  <button>Export</button>
+</div>
+
 <ul id="item-list"></ul>
 
 <style>
+/* Displays additional info for each checkbox */
+.label-with-help {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.help-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #0a66c2;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.help-text {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: white;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 180px;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+.texthelp:hover .help-text {
+  display: block;
+}
+
+/* The results section that also holds the export button */
+  .results {
+    max-width: 700px;  
+    margin: 0 auto;     
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+  }
+  .results h2{
+    padding-left: 0.2rem;
+    color: #0a66c2;
+  }
+  .results button{
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem; 
+    text-align: right;
+    color: white;
+    background-color: #0a66c2;
+    border: 2px solid #0a66c2;
+    border-radius: 10px;
+    margin-top: 2em;
+    transition: all 0.2s ease;
+  }
+.results button:hover { 
+  color: #0a66c2;
+  background: #f0f4f8; 
+}
+
+
   #filters {
     margin-bottom: 1em;
   }

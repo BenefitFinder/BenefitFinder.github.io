@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const filters = Array.from(document.querySelectorAll('#filters input[type="checkbox"]'));
   const itemList = document.getElementById("item-list");
   const instructionCard = document.getElementById("instruction-card");
+  const results = document.getElementById("results");
   const programs = window.programs || [];
 
 
@@ -73,11 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (activeFilters.length === 0) {
       // No filters → show instruction card, clear results
       instructionCard.style.display = "block";
+      results.style.setProperty("display", "none", "important");
       itemList.innerHTML = "";
       return;
     }
 
     instructionCard.style.display = "none";
+    results.style.setProperty("display", "flex", "important");
 
     // Find programs where any criteria matches a selected filter
     const matches = programs.filter(program =>
