@@ -16,7 +16,7 @@ criteria:
   - Ineligible for SSI
 
 tags:
-  - Financial
+  - Financial Aid
   - Maternity
   - Cash
 

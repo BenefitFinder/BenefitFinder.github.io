@@ -9,6 +9,7 @@ criteria:
   - Must be 18 years or older
 tags:
   - Food Assistance
+  - Food
   - Financial Aid
 requirements:
   - Proof of residence

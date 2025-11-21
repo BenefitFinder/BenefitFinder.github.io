@@ -23,7 +23,7 @@ criteria:
 tags:
   - Immigrant
   - Refugee
-  - Financial
+  - Financial Aid
   - Cash
 
 requirements:

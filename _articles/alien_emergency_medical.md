@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Alien Emergency Medical Programs
+title: Alien Emergency Health Programs
 subtitle: In progress
 description: Support for emergency health situations for individuals that do not meet citizenship and immigration status requirements of other Apple health programs.
 #logo:
@@ -18,7 +18,7 @@ criteria:
     - Are relatable to a MAGI based apple health program
 
 tags:
-  - Medical
+  - Health
 
 requirements:
   - In progress

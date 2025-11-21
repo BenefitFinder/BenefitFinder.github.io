@@ -23,7 +23,7 @@ criteria:
   - SSA must not deny or terminate benefits 
 
 tags:
-  - Financial
+  - Financial Aid
 
 requirements:
   - In progress
