@@ -117,7 +117,7 @@ title: Find Benefits
 
 <div id="results" class="results">
   <h2>Results</h2>
-  <button>Export</button>
+  <button id="export" type="button">Export</button>
 </div>
 
 <ul id="item-list"></ul>
@@ -415,7 +415,8 @@ title: Find Benefits
       "url": {{ article.url | relative_url | jsonify }},
       "description": {{ article.description | jsonify }},
       "criteria": {{ article.criteria | jsonify }},
-      "tags": {{ article.tags | jsonify }}
+      "tags": {{ article.tags | jsonify }},
+      "homepage_link": {{ article.homepage_link | jsonify }} 
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ];
@@ -424,4 +425,4 @@ title: Find Benefits
 
 
 {% include scripts.html %}
-<script src="/assets/js/checklist.js"></script>
+

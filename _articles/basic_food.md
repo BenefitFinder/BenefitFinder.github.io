@@ -15,7 +15,7 @@ tags:
   - Food
   - Hunger
   - SNAP
-  - Food assistance
+  - Food Assistance
   - Basic Food
 
 requirements:

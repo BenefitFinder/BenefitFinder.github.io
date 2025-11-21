@@ -123,6 +123,55 @@ filters.forEach(f => {
 
   // Initial state
   applyFilters();
+
+  // Export Button
+  const exportBtn = document.getElementById("export");
+
+  exportBtn.addEventListener("click", () => {
+    const cards = Array.from(itemList.querySelectorAll(".benefit-card"));
+
+    let textOutput = "";
+
+    cards.forEach(card => {
+      const title = card.querySelector(".benefit-title")?.textContent.trim() || "";
+      const articleUrl = card.querySelector(".benefit-title")?.href || "";
+
+      const criteria = Array.from(card.querySelectorAll(".criteria-list li"))
+        .map(li => li.textContent.trim());
+
+      const program = programs.find(p => p.title === title);
+
+      const tags = program?.tags?.join(", ") || "None";
+      const govUrl = program?.homepage_link || "No government link available";
+
+      textOutput += 
+`---------------------------
+Title: ${title}
+
+Criteria:
+${criteria.length ? criteria.map(c => "- " + c).join("\n") : "None"}
+
+Tags: ${tags}
+
+Our Article: ${articleUrl}
+Gov Homepage: ${govUrl}
+
+`;
+    });
+
+    // Create a downloadable file
+    const blob = new Blob([textOutput], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "BF_ResultSummary.txt";
+    document.body.appendChild(a);
+    a.click();
+
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
   updateSearchVisibility();
 
 });
