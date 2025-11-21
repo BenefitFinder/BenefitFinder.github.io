@@ -13,7 +13,7 @@ criteria:
   - Under 200% poverty line
 
 tags:
-  - Medical
+  - Health
 
 requirements:
   - In progress

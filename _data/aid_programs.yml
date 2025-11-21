@@ -13,14 +13,14 @@
 #  link: sample.url
 
 - name: Health Assistance Program
-  description: Provides financial help for qualifying low-incomme residents
+  description: Provides Financial Aid help for qualifying low-incomme residents
   criteria:
     - Resident of the state
     - Income below $40,000
     - Must be 18 years or older
   tags:
     - Health
-    - Financial Aid
+    - Financial Aid Aid
   updated: 11-7-25
   link: BenefitFinder.github.io/_articles/example_article.html 
 ...

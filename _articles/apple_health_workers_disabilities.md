@@ -12,7 +12,7 @@ criteria:
   - Self Employed
 
 tags:
-  - Medical
+  - Health
 
 requirements:
   - In progress

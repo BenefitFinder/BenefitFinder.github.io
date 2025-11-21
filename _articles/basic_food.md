@@ -162,7 +162,7 @@ As of 2025 these are the monthly income breakpoints. You may still be eligible i
       <li>Utility costs</li>
       <li>Childcare or dependent care expenses</li>
       <li>Child support paid</li>
-      <li>Medical expenses for seniors (60+) or disabled household members</li>
+      <li>Health expenses for seniors (60+) or disabled household members</li>
       <li>Property taxes / homeowner’s insurance (if applicable)</li>
     </ul>
   </details>

@@ -12,7 +12,7 @@ criteria:
   - Limited Income/Resources
 
 tags:
-  - Medical
+  - Health
 
 requirements:
   - In progress
