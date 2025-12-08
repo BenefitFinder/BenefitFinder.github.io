@@ -12,6 +12,7 @@ criteria:
   - Employed part time
   - Self Employed
   - Legal Citizen/Non-Citizen/Refugee
+  - Resident of Washington State  
 
 tags:
   - Health
