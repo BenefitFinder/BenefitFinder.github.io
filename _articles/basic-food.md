@@ -6,6 +6,8 @@ description: This program helps provide some extra funding towards food for thos
 logo: /assets/images/SNAP.png
 
 criteria:
+  - Age 18+
+  - Age 65+
   - Resident of the state
   - Citizen
   - Legal Immigrant
