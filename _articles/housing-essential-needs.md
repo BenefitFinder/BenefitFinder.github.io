@@ -11,7 +11,7 @@ criteria:
   - Legal Immigrant
   - Resident of the State  
   - Disability preventing work (short or long term) 
-  - Very low income
+  - 100-150% FPL
   - limited resources  
   - Not eligible for other higher-priority cash assistance programs (e.g. TANF, SSI)  
 
