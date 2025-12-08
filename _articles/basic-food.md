@@ -37,14 +37,12 @@ steps:
 
 application_link: https://www.washingtonconnection.org/eapplication/home.go?action=Introduction&source=
 application_note: There's a tutorial for the application towards the top right of the page, right above the "See if you qualify" box. To start the application itself, click the next button at the bottom right of the page. This application is also shared with some other Washington programs.
-homepage_link: https://www.washingtonconnection.org/home/
+homepage_link: https://www.dshs.wa.gov/esa/community-services-offices/basic-food
 homepage_note: This is the Basic Food home page for Washington Connection. They have a relatively quick survey you can fill out to fully determine your eligibility and benefit level. This is also where you can upload required documents.
 ---
 
-In this section you can see more about the criteria you need to meet to be accepted for Basic Food, along with any required documentation and examples of what those documents would be.
-You can also find contact information for 
-
-Example of extra **Markdown content** we can add:
+Here, you can see more about the criteria you need to meet to be accepted for Basic Food, along with any required documentation and examples of what those documents would be.
+You can also find contact information for the DSHS office.
 
 ### Contact Information
 - [Find a local DSHS office](https://www.dshs.wa.gov/office-locations?field_geofield_distance%5Bdistance%5D=100&field_geofield_distance%5Bunit%5D=3959&field_geofield_distance%5Borigin%5D=&field_office_type_tid%5B0%5D=9651)

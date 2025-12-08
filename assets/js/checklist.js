@@ -70,11 +70,28 @@ document.addEventListener("DOMContentLoaded", () => {
 function applyFilters() {
   updateSearchVisibility();
 
-  const activeCriteria = filters
-    .filter(f => f.checked && ["income","age"].includes(f.dataset.category))
+  //determine panel visibility
+  const criteriaVisible = criteriaFilters && criteriaFilters.style.display !== "none";
+  const categoryVisible = categoryFilters && categoryFilters.style.display !== "none";
+  
+  // Limit filters by visible panel
+  const visibleFilters = filters.filter(f => {
+    // Criteria filters live inside #CriteriaFilters
+    if (criteriaVisible && criteriaFilters.contains(f)) return true;
+  
+    // Category filters live inside #CategoryFilters
+    if (categoryVisible && categoryFilters.contains(f)) return true;
+  
+    return false;
+  });
+
+  // Active criteria from visible filters
+  const activeCriteria = visibleFilters
+    .filter(f => f.checked && ["income", "age"].includes(f.dataset.category))
     .map(f => f.value);
 
-  const activeTags = filters
+  // Active tags from visible filters
+  const activeTags = visibleFilters
     .filter(f => f.checked && f.dataset.category === "tags")
     .map(f => f.value);
 
@@ -104,7 +121,6 @@ filters.forEach(f => {
   f.addEventListener("change", () => {
     localStorage.setItem(f.id, f.checked);
 
-    // mutually exclusive
     const exclusiveCategories = ["income", "age", "searchType"]; 
     const category = f.dataset.category;
 
@@ -120,6 +136,25 @@ filters.forEach(f => {
     applyFilters();
   });
 });
+
+// Reset filters and remove local storage
+const resetBtn = document.getElementById("resetFiltersBtn");
+if (!resetBtn) return;
+
+resetBtn.addEventListener("click", () => {
+  // Clear all checkbox entries from localStorage
+  const filters = Array.from(document.querySelectorAll('.filters input[type="checkbox"]'));
+  filters.forEach(cb => {
+    localStorage.removeItem(cb.id);
+    cb.checked = cb.defaultChecked; //restore checkboxes to default
+  });
+
+  // reapply default filters
+  if (typeof applyFilters === "function") applyFilters();
+  if (typeof updateSearchVisibility === "function") updateSearchVisibility();
+});
+
+
 
   // Initial state
   applyFilters();

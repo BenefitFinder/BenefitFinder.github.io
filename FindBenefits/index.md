@@ -104,7 +104,6 @@ title: Find Benefits
 </div>
 </div>
 
-
 <!-- Instruction card -->
 <div id="instruction-card" class="instruction-card">
   <h3>Getting Started</h3>
@@ -122,8 +121,20 @@ title: Find Benefits
 
 <ul id="item-list"></ul>
 
+<div class="floating-reset-wrapper">
+  <div class="texthelp reset-tooltip-wrapper">
+    <span class="help-icon">?</span>
+    <span class="help-text reset-tooltip">
+      We don’t ever store your data on our end, but your selections do live in your browser.
+      Click this button to clear your selections from your browser history for privacy.
+    </span>
+    <button id="resetFiltersBtn" class="reset-btn">
+      Reset All Filters
+    </button>
+  </div>
+</div>
+
 <style>
-/* Displays additional info for each checkbox */
 .label-with-help {
   position: relative;
   display: inline-flex;
@@ -156,7 +167,7 @@ title: Find Benefits
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
   z-index: 10;
 }
-.texthelp:hover .help-text {
+.texthelp:hover .help-text:not(.reset-tooltip) {
   display: block;
 }
 
@@ -215,7 +226,6 @@ title: Find Benefits
     user-select: none;
   }
 
-  /* Hover  */
   .filter-card:hover {
     background: #f0f4f8;
     transform: translateY(-1px);
@@ -404,6 +414,96 @@ title: Find Benefits
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
+.reset-tooltip-wrapper .help-icon {
+  font-size: 1.1rem;   
+  width: 26px;         /* hitbox size */
+  height: 26px;
+  line-height: 24px;   /*center the icon */
+}
+
+/* Floating reset button that stays above footer */
+.floating-reset-wrapper {
+  position: sticky;
+  bottom: 2rem;       
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+  margin-top: 2rem;    
+}
+
+.reset-tooltip-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+/* Reset button */
+.reset-btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #2a7ae2;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.reset-btn:hover {
+  background-color: #1f65c7;
+}
+
+/* Tooltip next to reset button */
+.reset-tooltip {
+  display: none;
+  position: absolute;
+
+  /* anchor to the left of the question mark */
+  right: calc(100% + 10px);
+
+  /* vertically align with top of button */
+  top: 50%;
+  transform: translateY(-120%);
+
+  background: #333;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  width: 240px;
+  max-width: 80vw;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+/* Hover for desktop */
+.reset-tooltip-wrapper .help-icon:hover + .reset-tooltip {
+  display: block;
+}
+
+/* Mobile: show on tap instead of hover */
+@media (max-width: 600px) {
+  .reset-tooltip-wrapper:hover .reset-tooltip {
+    display: none;
+  }
+
+  .help-icon:active + .reset-tooltip,
+  .help-icon:focus + .reset-tooltip {
+    display: block;
+  }
+
+  .reset-tooltip {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    bottom: auto;
+    top: -10px; 
+    max-width: 90vw;
+  }
+}
 
 </style>
 
@@ -420,8 +520,10 @@ title: Find Benefits
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ];
-</script> 
 
+</script>
+
+<script src="/assets/js/checklist.js"></script>
 
 
 {% include scripts.html %}
