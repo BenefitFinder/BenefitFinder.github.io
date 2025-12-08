@@ -33,7 +33,7 @@ requirements:
 steps:
   - Gather documentation (identity, income/resource, residency, disability/age)  
   - Submit application for health coverage via WashingtonConnection, mail, fax, phone, or in person at a local Community Services Office  
-  - Wait for eligibility determination (no interview required for medical coverage)  
+  - Wait for eligibility determination 
   - If approved, receive a “ProviderOne” services card for coverage  
   - For dual-eligible clients (e.g. Medicare + Medicaid), coverage may act as secondary insurance to help over things not covered by Medicare
 
