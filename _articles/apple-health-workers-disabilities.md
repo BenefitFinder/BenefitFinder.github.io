@@ -70,6 +70,8 @@ Monthly earnings at or above the Substantial Gainful Activity (SGA) level after 
 - The job less results from an involuntary dismissal or health crisis; and The person continues to pay the monthly premium.
 
 
+![Alt text](/assets/images/HWD-EligibilityTiers.png)
+
 ### Examples of Documents You May Need
 
 <div class="faq-section">
