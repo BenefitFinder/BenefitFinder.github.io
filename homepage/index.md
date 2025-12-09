@@ -147,7 +147,7 @@ benefit-categories:
 <div class="fade-in">
   {% include feature_row id="benefit-categories" type="left" %}
 </div>
-
+<!--
 <div
   style="
     text-align:center;
@@ -171,7 +171,7 @@ benefit-categories:
     Here's a little bit about all the citizens that have chosen to apply for these programs. IN PROGRESS. This would have statistics and specific examples of improvements from benefits
   </p>
 </div>
-<!--
+
 <div class="fade-in">
   {% include feature_row id="benefit-categories" type="Right" %}
 </div>
