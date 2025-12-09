@@ -72,3 +72,5 @@ title: All Articles
   line-height: 1.35;
 }
 </style>
+
+{% include scripts.html %}

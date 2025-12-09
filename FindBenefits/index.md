@@ -227,7 +227,7 @@ title: Find Benefits
   </ul>
 </div>
 
-<div id="results" class="results">
+<div id="checklist-results" class="results">
   <h2>Results</h2>
   <button id="export" type="button">Export</button>
 </div>
@@ -285,18 +285,18 @@ title: Find Benefits
 }
 
 /* The results section that also holds the export button */
-  .results {
+  .checklist-results {
     max-width: 700px;  
     margin: 0 auto;     
     display: flex;
     justify-content: space-between;
     align-items: center;    
   }
-  .results h2{
+  .checklist-results h2{
     padding-left: 0.2rem;
     color: #0a66c2;
   }
-  .results button{
+  .checklist-results button{
     padding: 0.3rem 0.6rem;
     font-size: 1rem; 
     text-align: right;
@@ -307,7 +307,7 @@ title: Find Benefits
     margin-top: 2em;
     transition: all 0.2s ease;
   }
-.results button:hover { 
+.checklist-results button:hover { 
   color: #0a66c2;
   background: #f0f4f8; 
 }
@@ -705,9 +705,5 @@ title: Find Benefits
   ];
 
 </script>
-
-<script src="/assets/js/checklist.js"></script>
-
-
 {% include scripts.html %}
-
+<script src="/assets/js/checklist.js"></script>

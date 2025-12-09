@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const filters = Array.from(document.querySelectorAll('.filters input[type="checkbox"]'));
   const itemList = document.getElementById("item-list");
   const instructionCard = document.getElementById("instruction-card");
-  const results = document.getElementById("results");
+  const results = document.getElementById("checklist-results");
   const programs = window.programs || [];
 
   const criteriaFilters = document.getElementById("CriteriaFilters");
@@ -362,7 +362,7 @@ Gov Homepage: ${govUrl}
 
     // Temporarily remove existing children from container and keep original item nodes
     // (We preserve the original Node references so event listeners remain attached.)
-    items.forEach(it => container.removeChild(it));
+    items.forEach(it => it.remove());
 
     // Greedy packing: put each item into currently shortest column
     const colHeights = Array(columnCount).fill(0);
