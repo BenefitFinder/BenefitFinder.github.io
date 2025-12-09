@@ -16,7 +16,6 @@ criteria:
   - Legal Citizen
   - Legal Immigrant
   - Refugee
-  - Undocumented Non-Citizen
   - Resident of Washington State  
 
 tags:
