@@ -227,7 +227,7 @@ title: Find Benefits
   </ul>
 </div>
 
-<div id="checklist-results" class="results">
+<div id="checklist-results" class="checklist-results">
   <h2>Results</h2>
   <button id="export" type="button">Export</button>
 </div>
@@ -544,7 +544,7 @@ title: Find Benefits
 
 /* Floating reset button that stays above footer */
 .floating-reset-wrapper {
-  position: sticky;
+  /*position: sticky;*/
   bottom: 2rem;       
   z-index: 999;
   display: flex;
