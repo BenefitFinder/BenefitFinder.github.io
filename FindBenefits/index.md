@@ -2,7 +2,6 @@
 layout: custom
 title: Find Benefits
 ---
-
 <div class="filters filter-groups">
   <div class="search-group">
     <h4 class="filter-heading">Search Type</h4>
@@ -17,49 +16,161 @@ title: Find Benefits
       </label>
     </div>
   </div>
+  <div class="filter-group" style="text-align: center;">
+    <h4 class="filter-heading">Household Size</h4>
+    <select id="householdSize" class="household-dropdown">
+      <option value="1">1 person</option>
+      <option value="2">2 people</option>
+      <option value="3">3 people</option>
+      <option value="4">4 people</option>
+      <option value="5">5 people</option>
+      <option value="6">6 people</option>
+      <option value="7">7 people</option>
+      <option value="8">8 people</option>
+    </select>
+  </div>
 </div>
 
 <div id="CriteriaFilters">
-<div class="filters filter-groups">
+<div class="filters filter-masonry">
 
-  <!-- Added categories for each criteria -->
-
-  <!-- Income Category -->
+  <div class="filter-block">
   <div class="filter-group">
-    <h4 class="filter-heading">Income</h4>
-    <div class="filter-cards">
-      <label class="filter-card">
-        <input type="checkbox" value="Income below $40,000" data-category="income" id="check1">
-          <span class="texthelp">
-            Under $40,000
-            <span class="help-icon">?</span>
-            <span class="help-text">Income less than $40,000.</span>
-        </span>
-      </label>
-      <label class="filter-card">
-        <input type="checkbox" value="Income below $20,000" data-category="income" id="check2">
-          <span class="texthelp">
-            Under $20,000
-            <span class="help-icon">?</span>
-            <span class="help-text">Income less than $20,000.</span>
-          </span>
-      </label>
-    </div>
+  <h4 class="filter-heading">Income</h4>
+  <div class="filter-cards">
+    <!-- 100% FPL -->
+    <label class="filter-card">
+      <input type="checkbox" value="100% FPL" data-category="income" id="inccheck1">
+      <span class="income-range" data-min="18000" data-max="18000">$18,000 or less</span>
+      <span class="texthelp">
+        <span class="help-icon">?</span>
+        <span class="help-text">Income less than or equal to $18,000 annually for an individual.</span>
+      </span>
+    </label>
+    <!-- 100–150% FPL -->
+    <label class="filter-card">
+      <input type="checkbox" value="100-150% FPL" data-category="income" id="inccheck2">
+      <span class="income-range" data-min="18001" data-max="27000">$18,001 – $27,000</span>
+      <span class="texthelp">
+        <span class="help-icon">?</span>
+        <span class="help-text">Individual income between $18,001 and $27,000.</span>
+      </span>
+    </label>
+    <!-- 150–200% FPL -->
+    <label class="filter-card">
+      <input type="checkbox" value="150-200% FPL" data-category="income" id="inccheck3">
+      <span class="income-range" data-min="27001" data-max="36000">$27,001 – $36,000</span>
+      <span class="texthelp">
+        <span class="help-icon">?</span>
+        <span class="help-text">Individual income between $27,001 and $36,000.</span>
+      </span>
+    </label>
+    <!-- 200–250% FPL -->
+    <label class="filter-card">
+      <input type="checkbox" value="200-250% FPL" data-category="income" id="inccheck4">
+      <span class="income-range" data-min="36001" data-max="45000">$36,001 – $45,000</span>
+      <span class="texthelp">
+        <span class="help-icon">?</span>
+        <span class="help-text">Individual income between $36,001 and $45,000.</span>
+      </span>
+    </label>
+    <!-- 250–300% FPL -->
+    <label class="filter-card">
+      <input type="checkbox" value="250-300% FPL" data-category="income" id="inccheck5">
+      <span class="income-range" data-min="45001" data-max="60000">$45,001 – $60,000</span>
+      <span class="texthelp">
+        <span class="help-icon">?</span>
+        <span class="help-text">Individual income between $45,001 and $60,000.</span>
+      </span>
+    </label>
+    <!-- Over 300% FPL -->
+    <label class="filter-card">
+      <input type="checkbox" value="over 300% FPL" data-category="income" id="inccheck6">
+      <span class="income-range" data-min="60001" data-max="9999999">Over $60,000</span>
+      <span class="texthelp">
+        <span class="help-icon">?</span>
+        <span class="help-text">Individual income over $60,000.</span>
+      </span>
+    </label>
   </div>
+  </div>
+</div>
+
+
 
   <!-- Age Category -->
+  <div class="filter-block">
   <div class="filter-group">
     <h4 class="filter-heading">Age</h4>
     <div class="filter-cards">
       <label class="filter-card">
-        <input type="checkbox" value="Must be 18 years or older" data-category="age" id="check3">
+        <input type="checkbox" value="Age 18+" data-category="age" id="check3">
         <span class="texthelp">
           Over 18
           <span class="help-icon">?</span>
-          <span class="help-text">Older than 18 years of age.</span>
+          <span class="help-text">18 years of age or older.</span>
+        </span>
+      </label>
+      <label class="filter-card">
+        <input type="checkbox" value="Age 65+" data-category="age" id="check4">
+        <span class="texthelp">
+          Over 65
+          <span class="help-icon">?</span>
+          <span class="help-text">65 years of age or older.</span>
         </span>
       </label>
     </div>
+  </div>
+  </div>
+
+  <!-- Disability Category -->
+  <div class = "filter-block">
+  <div class="filter-group">
+    <h4 class="filter-heading">Disabilities</h4>
+    <div class="filter-cards">
+      <label class="filter-card">
+        <input type="checkbox" value="Blind" data-category="disability" id="check5">
+        <span class="texthelp">
+          Blind
+          <span class="help-icon">?</span>
+          <span class="help-text">Legally blind. Some programs may have more strict requirements on visual acuity.</span>
+        </span>
+      </label>
+      <label class="filter-card">
+        <input type="checkbox" value="Disabled" data-category="disability" id="check6">
+        <span class="texthelp">
+          Disability lasting >3 months
+          <span class="help-icon">?</span>
+          <span class="help-text">Disability that prevents or inhibits work for 3 months or more.</span>
+        </span>
+      </label>
+    </div>
+  </div>
+  </div>
+
+
+  <div class = "filter-block">
+  <div class="filter-group">
+    <h4 class="filter-heading">Citizenship Status</h4>
+    <div class="filter-cards">
+      <label class="filter-card">
+        <input type="checkbox" value="Citizen" data-category="citizenship" id="citcheck1">
+        <span class="texthelp">
+          U.S. Citizen
+          <span class="help-icon">?</span>
+          <span class="help-text">You are a legal U.S. Citizen.</span>
+        </span>
+      </label>
+      <label class="filter-card">
+        <input type="checkbox" value="Legal Immigrant" data-category="citizenship" id="citcheck2">
+        <span class="texthelp">
+          Legal Immigrant
+          <span class="help-icon">?</span>
+          <span class="help-text">You are not a citizen but are a documented legal immigrant.</span>
+        </span>
+      </label>
+    </div>
+  </div>
   </div>
 
 </div>
@@ -75,7 +186,7 @@ title: Find Benefits
     <h4 class="filter-heading">Categories</h4>
     <div class="filter-cards">
       <label class="filter-card">
-        <input type="checkbox" value="Health" id="check6" data-category="tags">
+        <input type="checkbox" value="Health" id="category1" data-category="tags">
           <span class="texthelp">
             Health
             <span class="help-icon">?</span>
@@ -83,7 +194,7 @@ title: Find Benefits
         </span>
       </label>
       <label class="filter-card">
-        <input type="checkbox" value="Financial Aid" id="check7" data-category="tags">
+        <input type="checkbox" value="Financial Aid" id="category2" data-category="tags">
           <span class="texthelp">
             Financial Aid
             <span class="help-icon">?</span>
@@ -91,7 +202,7 @@ title: Find Benefits
           </span>
       </label>
       <label class="filter-card">
-        <input type="checkbox" value="Food Assistance" id="check8" data-category="tags">
+        <input type="checkbox" value="Food Assistance" id="category3" data-category="tags">
           <span class="texthelp">
             Food
             <span class="help-icon">?</span>
@@ -108,13 +219,15 @@ title: Find Benefits
 <div id="instruction-card" class="instruction-card">
   <h3>Getting Started</h3>
   <p>To find programs that may apply to you:</p>
-  <ol>
+  <ul>
     <li>Select one or more filters above.</li>
-    <li>Matching benefits will appear here.</li>
-  </ol>
+    <li>You can use a combination of Criteria and Categories to tailor your search</li>
+    <li>Some criteria are mutually exclusive, such as age.</li>
+    <li>Benefits matching <b>at least one</b> of your selected criteria will appear. This search should give you a rough idea of eligibility, so please check each article page for more detailed requirements.</li>
+  </ul>
 </div>
 
-<div id="results" class="results">
+<div id="checklist-results" class="results">
   <h2>Results</h2>
   <button id="export" type="button">Export</button>
 </div>
@@ -172,18 +285,18 @@ title: Find Benefits
 }
 
 /* The results section that also holds the export button */
-  .results {
+  .checklist-results {
     max-width: 700px;  
     margin: 0 auto;     
     display: flex;
     justify-content: space-between;
     align-items: center;    
   }
-  .results h2{
+  .checklist-results h2{
     padding-left: 0.2rem;
     color: #0a66c2;
   }
-  .results button{
+  .checklist-results button{
     padding: 0.3rem 0.6rem;
     font-size: 1rem; 
     text-align: right;
@@ -194,7 +307,7 @@ title: Find Benefits
     margin-top: 2em;
     transition: all 0.2s ease;
   }
-.results button:hover { 
+.checklist-results button:hover { 
   color: #0a66c2;
   background: #f0f4f8; 
 }
@@ -360,20 +473,28 @@ title: Find Benefits
 }
 
 /* --- Filter Groups & Headings --- */
-.filter-groups {
-  display: flex;
-  flex-wrap: wrap; /* Wrap for mobile */
-  gap: 1.5rem;
-  justify-content: center;   
-  margin-bottom: 2rem;
+#CriteriaFilters {
+  padding: 0 1.5rem; /* brings content in from screen edge */
 }
 
+.filter-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center; /* centers rows nicely */
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+/* Each group becomes a responsive card that can stack */
 .filter-group {
+  flex: 1 1 auto;  
+  max-width: 450px; /* prevents overly wide cards on big screens */
+  min-width: 150px;
   background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 1rem 1.2rem;
-  width: 320px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.06);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
@@ -409,7 +530,7 @@ title: Find Benefits
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 1rem 1.2rem;
-  width: 400px;
+ /* width: 400px;*/
   box-shadow: 0 2px 4px rgba(0,0,0,0.06);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
@@ -484,7 +605,65 @@ title: Find Benefits
   display: block;
 }
 
-/* Mobile: show on tap instead of hover */
+.filter-masonry {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  align-items: flex-start;
+}
+
+/* Column wrapper inserted by script */
+.masonry-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1 1 0;
+  min-width: 0;      /* avoid overflow */
+  max-width: 450px;  /* match filter-group max width */
+}
+
+/* ensure each block keeps its internal padding and full width inside the column */
+.filter-block {
+  width: 100%;
+  box-sizing: border-box;
+}
+/* Prevent splitting blocks and keep consistent spacing */
+.filter-masonry .filter-block {
+  display: block; /* ensure each filter block stays intact */
+}
+
+.masonry-stack {
+  column-count: 2;
+  column-gap: 1.5rem;
+}
+
+.masonry-stack .filter-group {
+  break-inside: avoid;     
+  margin-bottom: 1.5rem;
+}
+
+/* Dynamically change number of columns by screen width */
+@media (min-width: 1000px) {
+  .filter-masonry {
+    column-count: 2;  /* Desktop: 2 columns UPDATE THESE AS NEEDED*/
+  }
+}
+
+@media (min-width: 1400px) {
+  .filter-masonry {
+    column-count: 2;  /* Larger screens: 2 columns */
+  }
+}
+
+@media (min-width: 1800px) {
+  .filter-masonry {
+    column-count: 2;  /* Ultra-wide screens: 2 columns */
+  }
+}
+
 @media (max-width: 600px) {
   .reset-tooltip-wrapper:hover .reset-tooltip {
     display: none;
@@ -502,6 +681,10 @@ title: Find Benefits
     bottom: auto;
     top: -10px; 
     max-width: 90vw;
+  }
+  .filter-groups {
+    flex-direction: column;
+    align-items: stretch; 
   }
 }
 
@@ -522,9 +705,5 @@ title: Find Benefits
   ];
 
 </script>
-
-<script src="/assets/js/checklist.js"></script>
-
-
 {% include scripts.html %}
-
+<script src="/assets/js/checklist.js"></script>

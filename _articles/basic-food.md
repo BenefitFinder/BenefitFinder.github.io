@@ -11,7 +11,7 @@ criteria:
   - Resident of the state
   - Citizen
   - Legal Immigrant
-  - Within 200% of the poverty line
+  - 150-200% FPL
 
 tags:
   - Food

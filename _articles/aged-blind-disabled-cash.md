@@ -10,7 +10,7 @@ criteria:
   - Blind
   - Disabled
   - Resident of Washington State  
-  - Very low income
+  - 100% FPL
   - limited resources  
   - Citizen
   - Legal Immigrant 
