@@ -57,7 +57,7 @@ Depending on income level and circumstances, MSP offers different levels of assi
 
 
 ### Contact Information  
-- **Find a local DSHS:** https://www.dshs.wa.gov/office-locations  
+- [Find a local DSHS office](https://www.dshs.wa.gov/office-locations) 
 - **DSHS Customer Service Contact Center:** 877-501-2233  
 - **Email**: AskDSHS@dshs.wa.gov 
 

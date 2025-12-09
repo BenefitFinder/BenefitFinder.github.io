@@ -1,40 +1,36 @@
 ---
 layout: article
 title: Alien Emergency Health Programs
-subtitle: Emergency health program for illegal individuals
-description: AEM is for individuals who have a qualifying medical emergency and do not qualify for any other Apple Health program due to citizenship/immigration requirements under WAC 182-503-0535. This includes qualified aliens who have not met the 5-year and are not exempt from the 5-year bar, nonpregnant nonqualified aliens, and undocumented individuals.
+subtitle: Emergency medical coverage for people who cannot qualify for Apple Health due to immigration status
+description: AEM provides temporary coverage for a qualifying medical emergency when a person cannot receive regular Apple Health because of federal citizenship or immigration requirements. This includes undocumented individuals, nonqualified immigrants, and some qualified immigrants who have not met the 5-year bar.
+
 #logo:
 
 criteria:
-  - 65 or older
-    - Receiving medicare
-    - OR
-    - seeking long term care
-    - Not relatable to a MAGI based apple health program
-  - over 18
-    - Not Receiving medicare
-    - OR
-    - Seeking long term care services
-    - Are relatable to a MAGI based apple health program
-  - Illegal Non-Citizen
-  - Not pregnant
+  - Age 65+
+  - Age 18+
+  - Undocumented Non-Citizen
+  - Legal Immigrant
   - Resident of Washington State  
+  - Ineligible for Apple Health
 tags:
   - Health
   - Medical
+  - Undocumented Immigrant
+  - Emergency Medical
 
 requirements:
-  - Documents that might be needed
-  - UB04
+  - UB-04 (hospital billing form)
   - History & Physical
   - Discharge Summary
-  - Cancer Treatment Plan/Pathology Report
-  - Dialysis Flow Chart/ Current Treatment Plan
-  - Anti-rejection Medication Treatment Plan
+  - Cancer treatment plan or pathology report
+  - Dialysis flow sheets or treatment plan
+  - Anti-rejection medication treatment plan
 
 steps:
-  - If 65 or older, you can apply online at the listed application link or by completing the Application for Long-Term Care/Aged, Blind, Disabled Coverage (HCA 18-005). This application can be downloaded from the Health Care Authority website.
-  - If 18 to 64, You can apply by completing the Application for Health Care Coverage (HCA 18-001), This application can be downloaded from the Health Care Authority website.
+  - If age 65+, apply online or submit the Long-Term Care/Aged, Blind, Disabled Application (HCA 18-005).
+  - If age 18–64, apply using the Health Care Coverage Application (HCA 18-001).
+  - Hospitals often help submit required medical documents for AEM approval.
 
 application_link: https://www.washingtonconnection.org/home/
 application_note: You can apply online at www.washingtonconnection.org or by completing the Application for Long-Term Care/Aged, Blind, Disabled Coverage (HCA 18-005).
@@ -43,16 +39,16 @@ homepage_note: Official DSHS page with full eligibility rules, coverage details,
 ---
 
 ### Contact Information
-- **Find a local DSHS office**: https://www.dshs.wa.gov/office-locations  
+- [Find a local DSHS office](https://www.dshs.wa.gov/office-locations)  
 - **DSHS Customer Service Contact Center**: 877-501-2233  
 - **Email**: AskDSHS@dshs.wa.gov  
 - <a href="https://www.hca.wa.gov/free-or-low-cost-health-care/i-help-others-apply-and-access-apple-health/apple-health-alien-emergency-medical">Health Care Authority Website</a> 
 
 ### Additional Notes on Eligibility
 
-Here’s a more in-depth checklist commonly used to determine whether someone is likely eligible for AEM:
+Here’s a more in-depth checklist to determine if you are likely eligible for AEM:
 
-- To qualify for an alien medical program (AMP) a person must: 
+To qualify for an alien medical program (AMP) a person must: 
 - Be ineligible for federally funded Washington apple health (WAH) programs due to the citizenship/alien status requirements described in <a href="https://app.leg.wa.gov/WAC/default.aspx?cite=182-503-0535">WAC 182-503-0535</a>.
 - Meet the requirements described in <a href="https://app.leg.wa.gov/WAC/default.aspx?cite=182-507-0115">WAC 182-507-0115</a>, <a href="https://app.leg.wa.gov/WAC/default.aspx?cite=182-507-0120">WAC 182-507-0120</a>, or <a href="https://app.leg.wa.gov/WAC/default.aspx?cite=182-507-0125">WAC 182-507-0125</a>; and
 - Meet all categorical and financial eligibility criteria for one of the following programs, except for the Social Security number or citizenship/alien status requirements: 
@@ -74,60 +70,84 @@ Here’s a more in-depth checklist commonly used to determine whether someone is
 <div class="faq-section">
 
   <details>
-    <summary>1. Proof of Identity / Social Security Number</summary>
+    <summary>Medical Records</summary>
     <ul>
-      <li>State-issued ID or driver’s license</li>
-      <li>U.S. passport</li>
-      <li>Tribal ID</li>
-      <li>Social Security card (or proof that you applied for one)</li>
+      <li>UB-04 hospital billing form</li>
+      <li>History & Physical</li>
+      <li>Discharge Summary</li>
+      <li>Cancer treatment plan or pathology report</li>
+      <li>Dialysis flow sheets or current treatment plan</li>
+      <li>Anti-rejection medication treatment plan (for transplant patients)</li>
     </ul>
+    <p>Hospitals typically submit these documents directly to DSHS for AEM approval.</p>
   </details>
 
- <details>
-    <summary>2. Proof of Age</summary>
+  <details>
+    <summary>Proof of Washington Residency</summary>
     <ul>
-      <li>Birth certificate</li>
-      <li>Driver’s license or state ID</li>
-      <li>Passport</li>
-      <li>Any official document listing your date of birth</li>
+      <li>Lease, utility bill, or official mail with your current address</li>
     </ul>
   </details>
 
   <details>
-    <summary>3. Proof of Disability or Blindness</summary>
+    <summary>Proof of Identity (if available)</summary>
     <ul>
-      <li>SSA disability award letter (if applicable)</li>
-      <li>Medical records, doctor’s statements, or hospital records</li>
-      <li>Physical, mental, or psychiatric evaluations</li>
-      <li>Other medical documents showing the condition is expected to last 12+ months</li>
+      <li>State ID, passport, or any official document with your name</li>
     </ul>
-    <p>DSHS may request you complete additional evaluations with a contracted provider.</p>
+    <p>Identity documents are helpful but not always required.</p>
   </details>
-
   <details>
-    <summary>4. Proof of Washington Residency</summary>
+    <summary>UB-04 (Hospital Billing Form)</summary>
     <ul>
-      <li>Utility bills, lease or rental agreement, mortgage statement, or similar proof of address</li>
-      <li>Any official mail showing name and current WA address</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>5. Proof of Income and Resources</summary>
-    <ul>
-      <li>Recent pay stubs or employer letters (if any income)</li>
-      <li>Bank statements, benefit award letters (Social Security, pension, etc.)</li>
-      <li>Documentation of savings, assets, or other resources (if required under program rules)</li>
+      <li>A standard hospital billing form used nationwide.</li>
+      <li>Lists hospital charges, dates of service, and diagnosis codes.</li>
+      <li><strong>Where to get it:</strong> The hospital’s billing department can print or email it on request.</li>
     </ul>
   </details>
 
   <details>
-    <summary>6. Proof of Immigration or Citizenship Status (if not a U.S. citizen)</summary>
+    <summary>History &amp; Physical</summary>
     <ul>
-      <li>Permanent Resident Card (Green Card)</li>
-      <li>USCIS / I-94 documents or other eligible immigration status verification</li>
+      <li>A report written when you are admitted to a hospital or evaluated in a clinic.</li>
+      <li>Includes symptoms, medical history, exam findings, and the doctor’s initial plan.</li>
+      <li><strong>Where to get it:</strong> Your hospital’s medical records department (often called “Health Information Management” or “Release of Information”).</li>
     </ul>
-    <p>Only required if not a U.S. citizen.</p>
+  </details>
+
+  <details>
+    <summary>Discharge Summary</summary>
+    <ul>
+      <li>A short document you receive when you leave the hospital.</li>
+      <li>Summarizes your diagnosis, treatments, and follow-up recommendations.</li>
+      <li><strong>Where to get it:</strong> Usually given at discharge; if lost, request a copy from the hospital’s medical records department.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Cancer Treatment Plan or Pathology Report</summary>
+    <ul>
+      <li>A treatment plan outlines the type of cancer and your planned course of treatment.</li>
+      <li>A pathology report confirms a cancer diagnosis from a biopsy or surgery.</li>
+      <li><strong>Where to get it:</strong> Your oncologist’s office or the hospital where testing was performed.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Dialysis Flow Sheets or Current Treatment Plan</summary>
+    <ul>
+      <li>Records showing each dialysis session, machine settings, and treatment notes.</li>
+      <li>A treatment plan indicates your dialysis schedule and medical need.</li>
+      <li><strong>Where to get it:</strong> Your dialysis center can provide printed copies.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Anti-Rejection Medication Treatment Plan</summary>
+    <ul>
+      <li>Documentation showing the medications you take after an organ transplant.</li>
+      <li>Includes dosage schedules and medical necessity from your transplant team.</li>
+      <li><strong>Where to get it:</strong> Your transplant clinic or specialist can print these records.</li>
+    </ul>
   </details>
 
 </div>

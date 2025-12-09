@@ -6,22 +6,28 @@ description: Allows people with disabilities who are working to purchase medical
 logo: /assets/images/HWD-logo.png
 
 criteria:
-  - over 16
+  - Age 16+
+  - Age 18+
+  - Age 65+
   - Disabled
   - Employed full time
   - Employed part time
   - Self Employed
-  - Legal Citizen/Non-Citizen/Refugee
+  - Legal Citizen
+  - Legal Immigrant
+  - Refugee
+  - Undocumented Non-Citizen
   - Resident of Washington State  
 
 tags:
   - Health
   - Disability
+  - Medical
 
 requirements:
   - Note, you may need to provide the following information about other people in your home including yourself.
   - Name
-  - Social Security Number
+  - Social Security Number (Or proof of having applied for one)
   - Proof of Income
   - Housing Costs
   - Childcare Costs
@@ -46,7 +52,7 @@ Since HWD requires a monthly premium payment, the program of choice for someone 
 ---
 
 ### Contact Information
-- **Find a local DSHS office**: https://www.dshs.wa.gov/office-locations  
+- [Find a local DSHS office](https://www.dshs.wa.gov/office-locations)
 - **DSHS Customer Service Contact Center**: 877-501-2233  
 - **Email**: AskDSHS@dshs.wa.gov  
 
@@ -54,7 +60,7 @@ Since HWD requires a monthly premium payment, the program of choice for someone 
 
 ### Additional Notes on Eligibility
 
-Here’s a more in-depth checklist commonly used to determine whether someone is likely eligible for HWD:
+Here’s a more in-depth checklist to determine if you are likely eligible for HWD:
 
 - Some people may be eligible for HWD, who are not eligible for other SSI-related medical programs, due to their having:
 
@@ -78,61 +84,72 @@ Monthly earnings at or above the Substantial Gainful Activity (SGA) level after 
 <div class="faq-section">
 
   <details>
-    <summary>1. Proof of Identity / Social Security Number</summary>
+    <summary>1. Name</summary>
     <ul>
-      <li>State-issued ID or driver’s license</li>
-      <li>U.S. passport</li>
-      <li>Tribal ID</li>
-      <li>Social Security card (or proof that you applied for one)</li>
+      <li>Needed for all household members applying.</li>
+      <li>Typically collected through the application itself.</li>
     </ul>
   </details>
 
- <details>
-    <summary>2. Proof of Age</summary>
+  <details>
+    <summary>2. Social Security Number</summary>
     <ul>
-      <li>Birth certificate</li>
+      <li>SSN card, SSA letter, or proof of application for an SSN.</li>
+      <li>Required unless you qualify for an exemption.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>3. Proof of Income</summary>
+    <ul>
+      <li>Recent pay stubs (last 30 days).</li>
+      <li>Self-employment ledgers or tax documents.</li>
+      <li>Benefit award letters (e.g., SSA, pension).</li>
+      <li>Where to get it: employer payroll, online SSA account, or self-kept income logs.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>4. Housing Costs</summary>
+    <ul>
+      <li>Lease, rent receipt, mortgage bill, or utility statements.</li>
+      <li>Used for expense deductions if relevant.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>5. Childcare Costs</summary>
+    <ul>
+      <li>Childcare receipts, provider statements, or monthly invoices.</li>
+      <li>Used to calculate income deductions for some households.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>6. Proof of Date of Birth</summary>
+    <ul>
       <li>Driver’s license or state ID</li>
-      <li>Passport</li>
+      <li>Birth certificate or passport</li>
       <li>Any official document listing your date of birth</li>
     </ul>
   </details>
 
   <details>
-    <summary>3. Proof of Disability or Blindness</summary>
+    <summary>7. Assets and Resources</summary>
     <ul>
-      <li>SSA disability award letter (if applicable)</li>
-      <li>Medical records, doctor’s statements, or hospital records</li>
-      <li>Physical, mental, or psychiatric evaluations</li>
-      <li>Other medical documents showing the condition is expected to last 12+ months</li>
-    </ul>
-    <p>DSHS may request you complete additional evaluations with a contracted provider.</p>
-  </details>
-
-  <details>
-    <summary>4. Proof of Washington Residency</summary>
-    <ul>
-      <li>Utility bills, lease or rental agreement, mortgage statement, or similar proof of address</li>
-      <li>Any official mail showing name and current WA address</li>
+      <li>Bank statements, retirement accounts, vehicle value, property documents.</li>
+      <li><strong>Note:</strong> HWD does <em>not</em> have a resource limit, but information may still be requested.</li>
     </ul>
   </details>
 
   <details>
-    <summary>5. Proof of Income and Resources</summary>
+    <summary>8. Other Household Circumstances</summary>
     <ul>
-      <li>Recent pay stubs or employer letters (if any income)</li>
-      <li>Bank statements, benefit award letters (Social Security, pension, etc.)</li>
-      <li>Documentation of savings, assets, or other resources (if required under program rules)</li>
+      <li>Documents supporting disability, employment, or living situation.</li>
+      <li>Examples: employer verification, self-employment proof, disability evaluations.</li>
     </ul>
   </details>
 
-  <details>
-    <summary>6. Proof of Immigration or Citizenship Status (if not a U.S. citizen)</summary>
-    <ul>
-      <li>Permanent Resident Card (Green Card)</li>
-      <li>USCIS / I-94 documents or other eligible immigration status verification</li>
-    </ul>
-    <p>Only required if not a U.S. citizen.</p>
-  </details>
 
 </div>
 

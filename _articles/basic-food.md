@@ -47,7 +47,7 @@ Here, you can see more about the criteria you need to meet to be accepted for Ba
 You can also find contact information for the DSHS office.
 
 ### Contact Information
-- [Find a local DSHS office](https://www.dshs.wa.gov/office-locations?field_geofield_distance%5Bdistance%5D=100&field_geofield_distance%5Bunit%5D=3959&field_geofield_distance%5Borigin%5D=&field_office_type_tid%5B0%5D=9651)
+- [Find a local DSHS office](https://www.dshs.wa.gov/office-locations)
 - DSHS Customer Service Contact Center: 877-501-2233
 - Email: AskDSHS@dshs.wa.gov
 

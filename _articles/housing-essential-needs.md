@@ -49,7 +49,7 @@ The Housing and Essential Needs (HEN) Referral Program connects low-income Washi
 ---
 
 ### Contact Information  
-- **Find a local DSHS / Community Services Office**: https://www.dshs.wa.gov/office-locations  
+- [Find a local DSHS office](https://www.dshs.wa.gov/office-locations)
 - **DSHS Customer Service Contact Center**: 877-501-2233  
 - **Email**: AskDSHS@dshs.wa.gov 
 

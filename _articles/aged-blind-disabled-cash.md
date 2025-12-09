@@ -59,7 +59,7 @@ Below you can learn about the full eligibility rules, required verification, and
 ---
 
 ### Contact Information
-- **Find a local DSHS office**: https://www.dshs.wa.gov/office-locations  
+- [Find a local DSHS office](https://www.dshs.wa.gov/office-locations)  
 - **DSHS Customer Service Contact Center**: 877-501-2233  
 - **Email**: AskDSHS@dshs.wa.gov  
 

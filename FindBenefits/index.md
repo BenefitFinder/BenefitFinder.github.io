@@ -104,7 +104,15 @@ title: Find Benefits
     <h4 class="filter-heading">Age</h4>
     <div class="filter-cards">
       <label class="filter-card">
-        <input type="checkbox" value="Age 18+" data-category="age" id="check3">
+        <input type="checkbox" value="Age 16+" data-category="age" id="agecheck1">
+        <span class="texthelp">
+          Over 16
+          <span class="help-icon">?</span>
+          <span class="help-text">16 years of age or older.</span>
+        </span>
+      </label>
+      <label class="filter-card">
+        <input type="checkbox" value="Age 18+" data-category="age" id="agecheck2">
         <span class="texthelp">
           Over 18
           <span class="help-icon">?</span>
@@ -112,7 +120,7 @@ title: Find Benefits
         </span>
       </label>
       <label class="filter-card">
-        <input type="checkbox" value="Age 65+" data-category="age" id="check4">
+        <input type="checkbox" value="Age 65+" data-category="age" id="agecheck3">
         <span class="texthelp">
           Over 65
           <span class="help-icon">?</span>
@@ -149,6 +157,7 @@ title: Find Benefits
   </div>
 
 
+<!-- Citizenship Category-->
   <div class = "filter-block">
   <div class="filter-group">
     <h4 class="filter-heading">Citizenship Status</h4>
@@ -167,6 +176,14 @@ title: Find Benefits
           Legal Immigrant
           <span class="help-icon">?</span>
           <span class="help-text">You are not a citizen but are a documented legal immigrant.</span>
+        </span>
+      </label>
+      <label class="filter-card">
+        <input type="checkbox" value="Undocumented Non-Citizen" data-category="citizenship" id="citcheck3">
+        <span class="texthelp">
+           Undocumented Non-Citizen
+          <span class="help-icon">?</span>
+          <span class="help-text">Typically someone who does not have legal U.S. citizenship or documentation status.</span>
         </span>
       </label>
     </div>
