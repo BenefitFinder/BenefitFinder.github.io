@@ -80,20 +80,22 @@ const criteriaImplications = {
   "150-200% FPL" : ["200-250% FPL", "250-300% FPL", "over 300% FPL"],
   "200-250% FPL" : ["250-300% FPL", "over 300% FPL"],
   "250-300% FPL" : ["over 300% FPL"],
+  "Age 65+" : ["Age 16+", "Age 18+"],
+  "Age 18+" : ["Age 16+"]
 };
 
 // Apply filters
 function applyFilters() {
   updateSearchVisibility();
 
-  // Collect ALL selected criteria
+  // Collect selected criteria
   let activeCriteria = filters
     .filter(f => f.checked && ["income", "age", "disability", "citizenship"].includes(f.dataset.category))
     .map(f => f.value);
 
-  // Expand activeCriteria using criteriaImplications
+  // Expand activeCriteria using criteriaImplications to catch all cases
   function expandCriteria(selected) {
-    const expanded = new Set(selected); // use Set to avoid duplicates
+    const expanded = new Set(selected);
 
     // Recursively add implied criteria
     function addImplied(value) {
@@ -102,7 +104,7 @@ function applyFilters() {
         implied.forEach(v => {
           if (!expanded.has(v)) {
             expanded.add(v);
-            addImplied(v); // recursively add implied values
+            addImplied(v);
           }
         });
       }
@@ -114,12 +116,12 @@ function applyFilters() {
 
   activeCriteria = expandCriteria(activeCriteria);
 
-  // Collect ALL selected category tags
+  // Collect all selected category tags
   const activeTags = filters
     .filter(f => f.checked && f.dataset.category === "tags")
     .map(f => f.value);
 
-  // No filters selected → show instructions
+  //if no filters selected then show instructions
   if (activeCriteria.length === 0 && activeTags.length === 0) {
     instructionCard.style.display = "block";
     results.style.setProperty("display", "none", "important");
@@ -152,12 +154,12 @@ function applyFilters() {
 
 
 
-  // Checkbox change listener (mutual exclusivity)
+  // Checkbox change listener
 filters.forEach(f => {
   f.addEventListener("change", () => {
     localStorage.setItem(f.id, f.checked);
 
-    //Set the categories that need to be mutually exclusive here
+    //categories that should be mutually exclusive UPDATE ME WITH NEW CATEGORIES OR FIX THIS
     const exclusiveCategories = ["income", "age", "citizenship","searchType"]; 
     const category = f.dataset.category;
 
@@ -249,7 +251,7 @@ Gov Homepage: ${govUrl}
   function updateIncomeRanges() {
     const size = parseInt(householdSize.value, 10) || 1;
   
-    // 2025 Federal Poverty Level (contiguous U.S.)
+    // 2025 Federal Poverty Level
     const baseFPL = 15060;
     const addPerPerson = 5380;
   
@@ -299,11 +301,10 @@ Gov Homepage: ${govUrl}
   updateIncomeRanges();
   householdSize.addEventListener("change", updateIncomeRanges);
 
-  //Masonry placements
   const container = document.querySelector('.filter-masonry');
   if (!container) return;
 
-  // breakpoints -> columns. Edit to taste.
+  // breakpoints -> how many columns to display
   const breakpoints = [
     { minWidth: 1400, cols: 3 },
     { minWidth: 1000, cols: 3 },
@@ -319,7 +320,6 @@ Gov Homepage: ${govUrl}
     return 2;
   }
 
-  // debounce utility
   function debounce(fn, wait = 120) {
     let t;
     return (...args) => {
@@ -328,7 +328,6 @@ Gov Homepage: ${govUrl}
     };
   }
 
-  // measure height including margin-bottom
   function measureHeight(el) {
     const rect = el.getBoundingClientRect();
     const style = getComputedStyle(el);
@@ -339,13 +338,11 @@ Gov Homepage: ${govUrl}
 
   // Main layout function
   function layoutMasonry() {
-    // Grab items (filter-blocks) in source order
+    // Grab items
     const items = Array.from(container.querySelectorAll('.filter-block'));
 
-    // If no items or only one, just return
+    // If no items or only one return
     if (items.length <= 1) {
-      // ensure container has no leftover columns from prior runs
-      // and that items are direct children if appropriate
       return;
     }
 
@@ -360,23 +357,18 @@ Gov Homepage: ${govUrl}
       columns.push(col);
     }
 
-    // Temporarily remove existing children from container and keep original item nodes
-    // (We preserve the original Node references so event listeners remain attached.)
+    // temporarily remove children
     items.forEach(it => it.remove());
 
-    // Greedy packing: put each item into currently shortest column
+    // put each element into the currently shortest column
     const colHeights = Array(columnCount).fill(0);
 
-    // measure each item BEFORE appending to column; measurements should be stable
+    // measure each item
     items.forEach(item => {
-      // ensure item is sized like it'll be in the column (100% width)
-      // so measurement matches final layout
       item.style.width = ''; // reset any inline width
-      item.style.boxSizing = 'border-box'; // be explicit
+      item.style.boxSizing = 'border-box';
 
-      // measure using getBoundingClientRect (requires item is not in DOM)
-      // to make measurement reliable, temporarily append to document body off-screen if detached
-      // but since we removed items from container, they are detached. Append to an offscreen container to measure.
+      // temporarily append to offscreen container 
       const measurer = document.createElement('div');
       measurer.style.position = 'absolute';
       measurer.style.visibility = 'hidden';
@@ -387,7 +379,6 @@ Gov Homepage: ${govUrl}
 
       const h = measureHeight(item);
 
-      // remove measurer and re-capture item node
       document.body.removeChild(measurer);
 
       // find shortest column index
@@ -410,9 +401,8 @@ Gov Homepage: ${govUrl}
     columns.forEach(col => container.appendChild(col));
   }
 
-  // Run layout after fonts/images settle; run again on resize (debounced)
+  // Run layout after fonts/images settle;
   function runLayoutWhenReady() {
-    // Some content (fonts/images) can change heights — wait till load, but also do a fallback run sooner
     layoutMasonry();
     // run after window load (images/fonts)
     window.addEventListener('load', () => {

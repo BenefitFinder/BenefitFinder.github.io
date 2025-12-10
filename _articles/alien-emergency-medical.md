@@ -2,12 +2,11 @@
 layout: article
 title: Alien Emergency Health Programs
 subtitle: Emergency medical coverage for people who cannot qualify for Apple Health due to immigration status
-description: AEM provides temporary coverage for a qualifying medical emergency when a person cannot receive regular Apple Health because of federal citizenship or immigration requirements. This includes undocumented individuals, nonqualified immigrants, and some qualified immigrants who have not met the 5-year bar.
+description: AEM provides temporary coverage for a qualifying medical emergency when a person cannot receive regular Apple Health because of federal citizenship or immigration requirements.
 
 #logo:
 
 criteria:
-  - Age 65+
   - Age 18+
   - Undocumented Non-Citizen
   - Legal Immigrant

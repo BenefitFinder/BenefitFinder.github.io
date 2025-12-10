@@ -7,8 +7,6 @@ logo: /assets/images/HWD-logo.png
 
 criteria:
   - Age 16+
-  - Age 18+
-  - Age 65+
   - Disabled
   - Employed full time
   - Employed part time

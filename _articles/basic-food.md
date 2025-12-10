@@ -7,7 +7,6 @@ logo: /assets/images/SNAP.png
 
 criteria:
   - Age 18+
-  - Age 65+
   - Resident of the state
   - Citizen
   - Legal Immigrant

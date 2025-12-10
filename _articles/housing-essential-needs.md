@@ -32,7 +32,7 @@ requirements:
 
 steps:
   - Gather documentation (identity, income/resources, medical incapacity, residency, housing status)  
-  - Submit application via Washington State Department of Social and Health Services (DSHS) — online, mail, fax, phone, or in person at a Community Services Office.
+  - Submit application via Washington State Department of Social and Health Services (DSHS) online, by mail, by fax, by phone, or in person at a Community Services Office.
   - Complete the financial interview (by phone or in person) if requested.
   - If you meet financial and incapacity criteria, receive a HEN referral notice from DSHS.
   - Contact a local HEN provider (through the network administered by Washington State Department of Commerce) to apply for housing support or essential-needs help.
@@ -127,7 +127,7 @@ The Housing and Essential Needs (HEN) Referral Program connects low-income Washi
 
 ### Important Limitations & Notes
 
-- HEN referral does **not guarantee** housing or rental assistance — funding is limited and subject to availability.
+- HEN referral does **not guarantee** housing or rental assistance as funding is limited and subject to availability.
 - If you are eligible for other higher-priority benefits (e.g. TANF, SSI), you may be disqualified from HEN.
 - You must stay below income and resource thresholds, report changes in circumstances, and complete eligibility reviews as required. 
 - HEN is meant as a short-term or emergency support. It is not guaranteed long-term housing or ongoing rent support.  

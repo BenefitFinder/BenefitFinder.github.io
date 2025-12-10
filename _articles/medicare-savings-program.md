@@ -104,7 +104,7 @@ Depending on income level and circumstances, MSP offers different levels of assi
     <ul>
       <li>Social Security income letter or statement</li>
       <li>Pension or retirement income documentation</li>
-      <li>Other income statements (if any) — wages, benefits, etc.</li>
+      <li>Other income statements (if any) such as  wages, benefits, etc.</li>
     </ul>
   </details>
 
