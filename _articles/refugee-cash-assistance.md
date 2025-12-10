@@ -1,8 +1,8 @@
 ---
 layout: article
 title: Refugee Cash Assistance Program
-subtitle: In progress
-description: Provides newly arrived refugees and humanitarian immigrants with a monthly cash grant for up to 4 months.
+subtitle: Cash Assistance for Non-TANF Eligible Families
+description: Provides newly arrived low income refugees and humanitarian immigrants with a monthly cash grant.
 #logo:
 
 criteria:
