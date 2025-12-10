@@ -34,7 +34,7 @@ homepage_note: This is the home page for Washington Connection. They have a rela
 
 Here you can see more about the criteria you need to meet to be elegible for Refugee Cash Assistance, along with any required documentation and examples of what those documents would be.
 
-###Contact Information
+### Contact Information
  - [Find a local DSHS office](https://www.dshs.wa.gov/office-locations)
  - DSHS Customer Service Contact Center: 877-501-2233
  - Email: AskDSHS@hshs.wa.gov
@@ -66,16 +66,16 @@ As of 2025 these are the monthly income breakpoints:
 	  </tr>
 	</thead>
 	<tbody>
-	  <tr><td>1<\td><td>$1,400</td></tr>
-	  <tr><td>2<\td><td>$1,640</td></tr>
-	  <tr><td>3<\td><td>$1,912</td></tr>
-	  <tr><td>4<\td><td>$2,166</td></tr>
-	  <tr><td>5<\td><td>$2,418</td></tr>
-	  <tr><td>6<\td><td>$2,680</td></tr>
-	  <tr><td>7<\td><td>$3,016</td></tr>
-	  <tr><td>8<\td><td>$3,284</td></tr>
-	  <tr><td>9<\td><td>$3,558</td></tr>
-	  <tr><td>10+<\td><td>$3,824</td></tr>
+	  <tr><td>1</td><td>$1,400</td></tr>
+	  <tr><td>2</td><td>$1,640</td></tr>
+	  <tr><td>3</td><td>$1,912</td></tr>
+	  <tr><td>4</td><td>$2,166</td></tr>
+	  <tr><td>5</td><td>$2,418</td></tr>
+	  <tr><td>6</td><td>$2,680</td></tr>
+	  <tr><td>7</td><td>$3,016</td></tr>
+	  <tr><td>8</td><td>$3,284</td></tr>
+	  <tr><td>9</td><td>$3,558</td></tr>
+	  <tr><td>10+</td><td>$3,824</td></tr>
 	</tbody>
   </table>
 </div>
