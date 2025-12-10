@@ -132,3 +132,39 @@ As of 2025 these are the monthly income breakpoints:
 	  </u1>
 	</details>
 </div>
+
+<style>
+.faq-section details {
+  margin: 1rem 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  background: #fafafa;
+}
+
+.faq-section summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-section summary::-webkit-details-marker {
+  display: none; /* Hide default marker for cleaner look */
+}
+
+.faq-section summary::after {
+  content: "➕";
+  float: right;
+  transition: transform 0.2s ease;
+}
+
+.faq-section details[open] summary::after {
+  content: "➖";
+}
+
+.faq-section h4 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+</style>
