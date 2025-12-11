@@ -7,7 +7,7 @@ description: Provides up to $450 per month for pregnant individuals who are low 
 
 criteria:
   - Pregnant
-  - 150-200% FPL
+  - 100% FPL
   - Citizen
   - Legal Immigrant
 
